@@ -189,9 +189,8 @@ This lab assumes you have already completed the following:
 
 **This is additional information and cannot be performed in this lab.**
 Fix Regressed SQLs - Please run SQL Tuning Advisor for the recommendations to fix the regressions. You can run SQL Tuning Advisor available either on Enterprise Manager or on Database Management service on cloud and then re-run the task again in SQL Performance Watch to verify if all regressed SQLs have been resolved. Please refer the below image, an example of SQL Tuning Advisor Recommendation on Diagnostic and Management service.
-
 	
-	![SQL Tuning Advisor Recommendations](./images/sqltuningrecomm.png " ")
+   ![SQL Tuning Advisor Recommendations](./images/sqltuningrecomm.png " ")
 
 Please [Refer to video](https://youtu.be/yzo_zdmvUTE) on how to use Custom or Guided workflow to fix the regressions and re-run SQL Performance Watch to validate the fixes. You can continue to run SQL Tuning Advisor for recommendations till you achieve satisfied results and replicate the same in the production environment to avoid the regressions proactively.
 
@@ -215,10 +214,9 @@ Please [Refer to video](https://youtu.be/yzo_zdmvUTE) on how to use Custom or Gu
 **This is additional information and cannot be performed in this lab.**
 Fix Regressed SQLs - Please run SQL Tuning Advisor for the recommendations to fix the regressions. You can run SQL Tuning Advisor available either on Enterprise Manager or on Database Management service on cloud and then re-run the task again in SQL Performance Watch to verify if all regressed SQLs have been resolved. Please refer the below image, an example of SQL Tuning Advisor Recommendations on Diagnostic and Management service.
 
+   ![Tuning Recommendations](./images/sqltuningrecomm.png " ")
 
-	![Tuning Recommendations](./images/sqltuningrecomm.png " ")
-
-	![SQL Tuning Advisor Recommendations](./images/sqltuningrecomm.png " ")
+   ![SQL Tuning Advisor Recommendations](./images/sqltuningrecomm.png " ")
 
 Please [Refer to video](https://youtu.be/yzo_zdmvUTE) on how to use Custom or Guided workflow to fix the regressions and re-run SQL Performance Watch to validate the fixes. You can continue to run SQL Tuning Advisor for recommendations till you achieve satisfied results and replicate the same in the production environment to avoid the regressions proactively.
 
