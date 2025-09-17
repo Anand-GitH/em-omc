@@ -1,105 +1,110 @@
-# Introduction
+# Exadata Fleet Dashboards
+## Introduction
+Exadata Fleet Dashboards provide a unified, high-level view of resource usage, capacity, and performance across an entire fleet of Exadata systems. They enable administrators to quickly identify systems that need attention, analyze component-level usage, and track metric trends, supporting proactive management of both on-premises and cloud-based Exadata and Recovery Appliance environments.
 
-## About Oracle Enterprise Manager
-Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
+### Objectives
+To enable users to efficiently navigate and utilize the Exadata Fleet Configuration Dashboards within Oracle Enterprise Manager, they can
+- Gain a high-level overview of resource usage across the fleet
+- Identify Exadata systems that require attention
+- Analyze usage of individual components within an Exadata system (by consulting the Exadata Fleet Component Capacity dashboard)
+- Review and analyze metric trends
 
-Join Oracle's ***Wim Coekaerts***, *senior vice president of software development*, as he describes key innovations delivered in Oracle Enterprise Manager to help customers easily migrate their databases to the cloud and simplify management of hybrid IT environments
+## Task 1: Explore Fleet Configuration Dashboard
 
-[](youtube:MZJQx6MuHA0)
+Exadata Fleet Configuration dashboard shows the Exadata hardware and software configurations across the Exadata and Recovery Appliance fleet, based on the last known metric collection. You can apply the filters to limit the display to a subset of systems.
 
-## Workshop Description
-The Real Application Testing is a fully functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
-- This Workshop VM comes preinstalled with Enterprise Manager 13.5 Release Update 1 and Oracle Database targets - 18.3, 18.8 and 19.7
-- It's easy and quick to deploy with everything starting automatically in under 20 minutes
+1. Log into Enterprise Manager using the credentials **sysman/Cloud2025**. 
 
-### Applicable Enterprise Manager Management Packs
-Labs under this workshop are covered by the following Management Pack.
-- Oracle Diagnostics Pack for Oracle Database
-- Tuning Pack for Oracle Database
-- Real Application Testing
+    ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
 
-### Content
-Oracle Real Application Testing option enables you to perform real-world testing of Oracle Database. By capturing production workloads and assessing the impact of system changes on these workloads before production deployment, Oracle Real Application Testing minimizes the risk of instabilities associated with system changes. The following are covered in this workshop:
-- Run SQL Performance Analyzer to review SQL performance before 19c Upgrade
-- Capture workload of 18c Database
-- Run Database Replay of 18c Database Workload in 19c Database
-- Run Consolidation Replay in 2 separate Pluggable Databases
+    ![Landing Page](images/landingpage.png " ")
+
+2. Click the **hamburger menu** icon.
+
+    ![Enterprise Manager menu icon](images/navigationmenu.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+    ![Navigate to Dashboards](images/dashboardsicon.png " ")
+
+4. On the **Dashboards** page, click on the **Exadata Fleet Configuration** dashboard.
+
+    ![Exadata Fleet Configuration](images/dashboardsmenu.png " ")
+
+5. Explore Exadata Fleet Configuration Dashboard 
+
+    **Filters:** Allows to filter content on dashboard using target name, engineered system type, deployment type, generation, DB Server OS, Major version and also allows to filter using the target properties which include Location, Line of Business, Department, Lifecycle status & others. 
+
+    ![Exadata Fleet Configuration Filters](images/efcfilters.png " ")
+
+    Exadata Fleet Configuration dashboard provides a structured way to view and analyze the configuration of your Engineered System fleet. It is divided into four vertical sections:
+    
+    - **Overview:** Provides a high-level summary of your Engineered System fleet. It displays ring charts showing the distribution by system type, deployment type, service type, database deployment option, and fabric type. This helps quickly identify how systems are deployed and configured across environments.
+
+        ![Exadata Fleet Configuration Overview](images/efc-overview.png " ")
+
+    - **Hardware:** Shows the physical characteristics of the fleet. Ring charts display Exadata generations, server models, storage types, and switch models. This helps assess hardware diversity and standardization.
+
+        ![Exadata Fleet Configuration Hardware](images/efc-hardware.png " ")
+
+    - **Software:** Summarizes the software landscape across components. It shows distributions of OS versions, ILOM versions, Exadata software versions, and switch firmware versions. This helps track consistency and upgrade needs.
+
+        ![Exadata Fleet Configuration Hardware](images/efc-software.png " ")
+
+    - **Database:** Provides insights into deployed databases. It shows CDB vs. Non-CDB usage, database and PDB versions, ASM redundancy levels, and Grid Infrastructure versions. This helps monitor database standardization and lifecycle status.
+
+        ![Exadata Fleet Configuration Hardware](images/efc-database.png " ")
 
 
-### Additional Workshop Supported Use Cases
+6. Apply the "Target Property: Department" Filter by selecting **HR** department
 
-For additional Enterprise Manager use cases, see below and visit [LiveLabs](http://livelabs.oracle.com) for the details.
-#### 1. Database Lifecycle Automation
--	Create a Pluggable Database (PDB)
--	Un-plug/Plug an existing Pluggable Database
--	Clone an existing Pluggable Database
--	Run Compliance Management for Pluggable Database
--	Self- service to request a PDB using PDBaaS
--	Administrative Setup for PDBaaS (Private Cloud)- Review only
+    ![Exadata Fleet Configuration Filter](images/filterbydepthr.png " ")
 
-#### 2. Find, Fix, Validate
-- View unified Database Performance via Performance Hub
-- Use Real-time Database Operations Monitoring to view long running database tasks
-- Identify Top SQL in a PDB and tune it using SQL Tuning Advisor
-- Use SQL Performance Analyzer Optimizer to gather statistics for validation
-- Use Database Workload Replay to run real workload against your changes for additional validation
+7. Analyze the filtered results 
 
-#### 3. Database Fleet Maintenance - Patching
-* Detect Configuration Pollution
-* Patch a Database target using a Gold Image
-    - All Pluggable Databases in that Container Database will automatically get patched
-    - Rollback and Cleanup
+    HR department operates one X6 generation Exadata system on-premises, running Database Server OS version 8.10 with InfiniBand connectivity and a multitenant database on DB version 19.24.
 
-#### 4. Database Fleet Maintenance - Upgrade
-* Detect Configuration Pollution
-* Upgrade Oracle DB Software at scale with minimal downtime
-    - All Pluggable Databases in that Container Database will automatically get upgraded
-    - Cleanup
+    ![Exadata Fleet Configuration Filtered Results](images/filteredresults.png " ")
 
-#### 5. Compliance and Drift Management
-- Analyze, Increase standardization, reduce number of different configuration sets
-- Execute a one-time comparison to compare the latest reference configuration to one or more targets to determine the configuration differences
-- Continuous drift monitoring of multiple targets against a reference target for initialization parameters using customized configuration monitoring template
-- Run a review aggregated security compliance framework and standard for Oracle Database 12c and Oracle Host targets
-- Host security compliance using custom compliance standard
+## Task 2: Explore Fleet Aggregated Capacity Dashboard
 
-#### 6. Job System Automation
-* Understand how to create an OS Command Job
-* Create a SQL command Job
-* Create Database Backup Job using Wizard
+Exadata Fleet Configuration dashboard shows the Exadata hardware and software configurations across the Exadata and Recovery Appliance fleet, based on the last known metric collection. You can apply the filters to limit the display to a subset of systems.
 
-#### 7. Enterprise Monitoring
-- Explore Enterprise Summary page and drill down to see a list of down targets
-- Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
-- Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
-- Create a new Corrective Action and associate it with a metric
-- Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
-- Create a Monitoring Template from a Database Instance target and deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise
-- View the hierarchy of an existing Administrator Group
-- Review out-of-the-box incident rules shipped with Enterprise Manager
+1. Click on  **Dashboards**.
 
-#### 8. Deploy and Manage Oracle Databases with Ansible and Enterprise Manager
-- Install and configure Ansible to work with Oracle Enterprise Manager 13c
-- Review Oracle Enterprise Manager DBaaS setup for Pluggable Databases
-- Provision, resize, shutdown, start and delete a Pluggable Database using Ansible playbooks and EM's DBaaS capabilities
+    ![Navigate to Dashboards](images/returndashboards.png " ")
 
-## More Information on Oracle Enterprise Manager
-Managing Your Hybrid Database Fleet
-[](youtube:TUaAweMX3S4)
+2. On the **Dashboards** page, click on the **Exadata Fleet Aggregated Capacity** dashboard.
 
-Drive Your Autonomous Future with Oracle Enterprise Manager
-[](youtube:7khTglg0_3g)
+    ![Exadata Fleet Aggregated Capacity](images/dashboardsmenux.png " ")
 
-- [Enterprise Manager Cloud Control Solutions](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emcon/enterprise-manager-management-focus-areas.html#GUID-7F3BF18C-97DF-44BC-8BB7-6A864AF1A150)
-- [Enterprise Manager Cloud Control 13.4 Getting Started](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/index.html)
-- [Architecture of Enterprise Manager Cloud Control](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emcon/enterprise-manager-cloud-control-architecture.html#GUID-1A384373-7CD5-434D-9939-874E940CBF21)
-- [Installation and Upgrade](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/install.html)
-- [Enterprise Manager Blogs](https://blogs.oracle.com/oem/)
-- [Enterprise Manager Videos](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/videos.html)
-- [Enterprise Manager Licensing Guide](https://docs.oracle.com/cd/E63000_01/OEMLI/introduction.htm#OEMLI108)
-- [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
+5. Explore Fleet Aggregated Capacity Dashboard 
+
+    **Filters:** Allows to filter content on dashboard using target name, engineered system type, deployment type, generation, DB Server OS, Major version and also allows to filter using the target properties which include Location, Line of Business, Department, Lifecycle status & others. 
+
+    ![Exadata Fleet Aggregated Capacity Filters](images/efac-filters.png " ")
+
+    Exadata Fleet Aggregated Capacity dashboard summarizes the capacity averaged over the last 31 days for the Exadata and Recovery Appliance fleet or filtered subset of the fleet. It provides a high-level summary of fleet resource usage indicating overall average utilization. This dashboard is organized into two sections.
+    
+    - **Database Server CPU and Memory, and Storage:** The CPU, memory, and storage charts summarize 31-day resource allocation and trends across the Engineered System fleet to highlight usage patterns and potential anomalies.
+
+        ![Exadata Fleet Aggregated Capacity - DB Server CPU, Memory & Storage](images/efac-cpumemorystorage.png " ")
+
+    - **Storage Server I/O:** Provides line charts with aligned timelines to correlate key storage server performance metrics—such as latency, throughput, IOPS, I/O load, and utilization—helping diagnose performance issues by viewing related values together.
+
+        ![Exadata Fleet Aggregated Capacity - Storage I/O](images/efac-storageio.png " ")
+        ![Exadata Fleet Aggregated Capacity - Storage I/O](images/efac-storageiox.png " ")
+
+
+
+## Learn More
+
+  - [Exadata Fleet Dashboards](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/emxad/exadata-fleet-dashboards.html)
+  - [Enterprise Manager 24ai Documentation Library](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/index.html)
+  - [Enterprise Manager 24ai Tech Forum Video Playlist](https://www.youtube.com/playlist?list=PLiuPvpy8QsiXvGYMP_N3WA6bddXvUH-Y0)
 
 ## Acknowledgements
-- **Author** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Contributors** - Dave Le Roy, Björn Bolltoft - Enterprise Manager Product Management
-- **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022
+- **Author** - Anand Prabhu, Principal Member of Technical Staff, Enterprise Manager
+- **Contributors** - Bjorn Bolltoft, Mahesh Sharma - Enterprise Manager Product Management
+- **Last Updated By/Date** - Anand Prabhu, Principal Member of Technical Staff, Enterprise Manager September 2025
+
