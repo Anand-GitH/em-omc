@@ -1,0 +1,46 @@
+{
+  "workshoptitle": "Oracle Enterprise Manager: Exadata Management",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Exadata Management",
+      "filename": "./../../intro/intro-exdata-mgmt-overview.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Using OSC Environment",
+      "filename": "./../../getstarted/getstarted.md"
+    },
+    {
+      "title": "Lab 1: Exadata Fleet Dashboards",
+      "description": "The objective of this lab is to become familiar with fleet dashboards",
+      "publisheddate": "9/17/2025",
+      "filename": "./../../fleetdashboards/fleetdashboards.md"
+    },
+    {
+      "title": "Lab 2: Database Impact Advisor",
+      "description": "The objective of this lab is to become familiar with database impact advisor",
+      "publisheddate": "9/17/2025",
+      "filename": "./../../dbimpactadvisor/dbimpactadvisor.md"
+    },
+    {
+      "title": "Lab 3: Chargeback Administration",
+      "description": "The objective of this lab is to become familiar with chargeback",
+      "publisheddate": "9/17/2025",
+      "filename": "./../../chargeback/chargeback.md"
+    },
+    {
+      "title": "Lab 4: I/O Resource Management Advisor",
+      "description": "The objective of this lab is to become familiar with IORM advisor",
+      "publisheddate": "9/17/2025",
+      "filename": "./../../iormadvisor/iormadvisor.md"
+    },
+    {
+      "title": "Lab 5: Autonomous Health Framework Administration",
+      "description": "The objective of this lab is to become familiar with AHF Management",
+      "publisheddate": "9/17/2025",
+      "filename": "./../../ahfmanagement/ahfmanagement.md"
+    }
+  ]
+}

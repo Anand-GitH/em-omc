@@ -1,105 +1,56 @@
-# Introduction
+## About this Workshop
+The goal of this workshop is to become familiar with Exadata Management Pack's advanced management and monitoring features for engineered systems using Oracle Enterprise Manager 24ai.
 
-## About Oracle Enterprise Manager
-Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
+*Estimated Workshop Time*: 70 minutes
 
-Join Oracle's ***Wim Coekaerts***, *senior vice president of software development*, as he describes key innovations delivered in Oracle Enterprise Manager to help customers easily migrate their databases to the cloud and simplify management of hybrid IT environments
+### About Oracle Enterprise Manager 24ai
+Oracle Enterprise Manager 24ai is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
 
-[](youtube:MZJQx6MuHA0)
+Watch this overview to learn about the latest innovations in the new Enterprise Manager 24ai. This session introduces the key aspects of this groundbreaking release, including enhanced scalability, robust security measures, zero downtime monitoring, and intelligent impact analysis with advisory services. Discover how you can harness the power of modern, AI-infused management technologies to supercharge your Oracle Database and Engineered Systems across your data centers and on any cloud.
 
-## Workshop Description
-The Real Application Testing is a fully functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
-- This Workshop VM comes preinstalled with Enterprise Manager 13.5 Release Update 1 and Oracle Database targets - 18.3, 18.8 and 19.7
-- It's easy and quick to deploy with everything starting automatically in under 20 minutes
+[](youtube:ZW5E1kZ6izw)
 
-### Applicable Enterprise Manager Management Packs
-Labs under this workshop are covered by the following Management Pack.
-- Oracle Diagnostics Pack for Oracle Database
-- Tuning Pack for Oracle Database
-- Real Application Testing
+### Objectives
+In this workshop, you will learn how to use:
+- Exadata Fleet Dashboards
+- Database Impact Advisor
+- Chargeback Administration
+- I/O Resource Management Advisor
+- Engineered System Autonomous Health Framework Management
+
+## Summary
+Exadata administrators managing large on-premises and cloud-based Exadata fleets can leverage Oracle Enterprise Manager 24ai's Exadata Management Pack to streamline critical operations.
+
+- Analyze performance, capacity, and inventory across the Exadata fleet
+- Manage and monitor Exachk compliance check policies, schedules, and invocations across the fleet
+- Perform Exadata hardware component patching across the Exadata fleet
+- Perform noisy-neighbor and CPU utilization analysis across all databases running on an Exadata
+- Visualize Exascale storage usage across all databases running on an Exadata
+- Visualize a detailed inventory of databases running on a Cloud-based Exadata (Oracle Exadata Database Service on Cloud@Customer, Oracle Exadata Database Service on Dedicated Infrastructure, Oracle Exadata Database Service on Exascale Infrastructure)
+
+#### Applicable Enterprise Manager Management Packs
+
+- Exadata Management Pack
+- Oracle Cloud Management Pack
 
 ### Content
-Oracle Real Application Testing option enables you to perform real-world testing of Oracle Database. By capturing production workloads and assessing the impact of system changes on these workloads before production deployment, Oracle Real Application Testing minimizes the risk of instabilities associated with system changes. The following are covered in this workshop:
-- Run SQL Performance Analyzer to review SQL performance before 19c Upgrade
-- Capture workload of 18c Database
-- Run Database Replay of 18c Database Workload in 19c Database
-- Run Consolidation Replay in 2 separate Pluggable Databases
 
+  | **Step No.** | **Feature**                                   | **Approx. Time** | **Details**                                                                                                                                                                                                                    | **Value proposition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+  |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | **1**  | Exadata Fleet Dashboards                              | 15 minutes       | Explore Oracle-defined dashboards that distill Exadata component hardware and software metric data for individual Exadata (on-premises and Cloud-based) and Recovery Appliance systems into integrated, detailed fleet-level visualizations.                         | Get a high-level overview of resource usage across the fleet, Identify which Exadata systems need attention, Analyze usage for components within an Exadata system, Analyze metric trends                                                                                                                                                                                                                                             |
+  | **2**  | Database Impact Advisor                                | 15 minutes       | Learn how to use Database Impact Advisor to identify noisy-nieghbors                                                                                                                                              | Database Impact Advisor can be run against an individual Exadata system to perform system-wide database CPU usage noisy-neighbor analysis in order to identify databases whose performance is potentially impacted by other databases or other operating system processes.                                                                                                                                                                                                                                                                                                  |
+  **3**  | Chargeback Administration                             | 15 minutes       | Explore how chargeback helps to allocate and track costs of IT resources.                                                 | Enterprise Manager Chargeback enables transparent accountability by metering resource usage, assigning costs, and providing detailed consumption reports to IT and resource consumers.                                                                                                                                          
+  | **4**  | I/O Resource Management Advisor                         | 15 minutes       | Explore Enterprise Manager I/O Resource Management Advisor to analyze Exadata I/O utilization.                                                                                                           | I/O Resource Management Advisor delivers actionable insights to optimize Exadata system performance by analyzing I/O utilization, identifying bandwidth needs, and managing resource consumption effectively                                                                                                                                                                                                                                                                                                                                 |
+  | **5**  | Engineered System Autonomous Health Framework Administration                          | 10 minutes       | Explore how to monitor and manage Oracle Autonomous Health Framework and Oracle Exachk across the Engineered System fleet. | Engineered System AHF Administration empowers Exadata and Recovery Appliance administrators to centrally monitor, manage, and automate AHF and Exachk operations across the fleet, ensuring compliance, minimizing downtime, and maximizing performance..                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-### Additional Workshop Supported Use Cases
-
-For additional Enterprise Manager use cases, see below and visit [LiveLabs](http://livelabs.oracle.com) for the details.
-#### 1. Database Lifecycle Automation
--	Create a Pluggable Database (PDB)
--	Un-plug/Plug an existing Pluggable Database
--	Clone an existing Pluggable Database
--	Run Compliance Management for Pluggable Database
--	Self- service to request a PDB using PDBaaS
--	Administrative Setup for PDBaaS (Private Cloud)- Review only
-
-#### 2. Find, Fix, Validate
-- View unified Database Performance via Performance Hub
-- Use Real-time Database Operations Monitoring to view long running database tasks
-- Identify Top SQL in a PDB and tune it using SQL Tuning Advisor
-- Use SQL Performance Analyzer Optimizer to gather statistics for validation
-- Use Database Workload Replay to run real workload against your changes for additional validation
-
-#### 3. Database Fleet Maintenance - Patching
-* Detect Configuration Pollution
-* Patch a Database target using a Gold Image
-    - All Pluggable Databases in that Container Database will automatically get patched
-    - Rollback and Cleanup
-
-#### 4. Database Fleet Maintenance - Upgrade
-* Detect Configuration Pollution
-* Upgrade Oracle DB Software at scale with minimal downtime
-    - All Pluggable Databases in that Container Database will automatically get upgraded
-    - Cleanup
-
-#### 5. Compliance and Drift Management
-- Analyze, Increase standardization, reduce number of different configuration sets
-- Execute a one-time comparison to compare the latest reference configuration to one or more targets to determine the configuration differences
-- Continuous drift monitoring of multiple targets against a reference target for initialization parameters using customized configuration monitoring template
-- Run a review aggregated security compliance framework and standard for Oracle Database 12c and Oracle Host targets
-- Host security compliance using custom compliance standard
-
-#### 6. Job System Automation
-* Understand how to create an OS Command Job
-* Create a SQL command Job
-* Create Database Backup Job using Wizard
-
-#### 7. Enterprise Monitoring
-- Explore Enterprise Summary page and drill down to see a list of down targets
-- Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
-- Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
-- Create a new Corrective Action and associate it with a metric
-- Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
-- Create a Monitoring Template from a Database Instance target and deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise
-- View the hierarchy of an existing Administrator Group
-- Review out-of-the-box incident rules shipped with Enterprise Manager
-
-#### 8. Deploy and Manage Oracle Databases with Ansible and Enterprise Manager
-- Install and configure Ansible to work with Oracle Enterprise Manager 13c
-- Review Oracle Enterprise Manager DBaaS setup for Pluggable Databases
-- Provision, resize, shutdown, start and delete a Pluggable Database using Ansible playbooks and EM's DBaaS capabilities
-
-## More Information on Oracle Enterprise Manager
-Managing Your Hybrid Database Fleet
-[](youtube:TUaAweMX3S4)
-
-Drive Your Autonomous Future with Oracle Enterprise Manager
-[](youtube:7khTglg0_3g)
-
-- [Enterprise Manager Cloud Control Solutions](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emcon/enterprise-manager-management-focus-areas.html#GUID-7F3BF18C-97DF-44BC-8BB7-6A864AF1A150)
-- [Enterprise Manager Cloud Control 13.4 Getting Started](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/index.html)
-- [Architecture of Enterprise Manager Cloud Control](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emcon/enterprise-manager-cloud-control-architecture.html#GUID-1A384373-7CD5-434D-9939-874E940CBF21)
-- [Installation and Upgrade](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/install.html)
+## Learn More
+- [Advanced Management and Monitoring with Exadata Management Pack](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/emxad/exadata-management-pack-features.html)
 - [Enterprise Manager Blogs](https://blogs.oracle.com/oem/)
-- [Enterprise Manager Videos](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/videos.html)
-- [Enterprise Manager Licensing Guide](https://docs.oracle.com/cd/E63000_01/OEMLI/introduction.htm#OEMLI108)
+- [Enterprise Manager Videos](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/videos.html)
+- [Enterprise Manager Licensing Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/oemli/enterprise-manager-licensing-information-user-manual.pdf)
 - [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
 
 ## Acknowledgements
-- **Author** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Contributors** - Dave Le Roy, Björn Bolltoft - Enterprise Manager Product Management
-- **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022
+- **Author** - Anand Prabhu, Principal Member of Technical Staff, Enterprise Manager
+- **Contributors** - Bjorn Bolltoft, Mahesh Sharma - Enterprise Manager Product Management
+- **Last Updated By/Date** - Anand Prabhu, Principal Member of Technical Staff, Enterprise Manager September 2025
