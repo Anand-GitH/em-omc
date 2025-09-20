@@ -52,5 +52,5 @@ Exadata administrators managing large on-premises and cloud-based Exadata fleets
 
 ## Acknowledgements
 - **Author** - Anand Prabhu, Principal Member of Technical Staff, Enterprise Manager
-- **Contributors** - Bjorn Bolltoft, Mahesh Sharma - Enterprise Manager Product Management
+- **Contributors** - Swapnil Sinvhal, Bjorn Bolltoft, Mahesh Sharma - Enterprise Manager Team, Michael Reed, Maury Edmonds, Geoffrey Grandstaff - Oracle Solution Center
 - **Last Updated By/Date** - Anand Prabhu, Principal Member of Technical Staff, Enterprise Manager September 2025
