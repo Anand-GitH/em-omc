@@ -41,6 +41,11 @@
       "description": "The objective of this lab is to become familiar with AHF Management",
       "publisheddate": "9/17/2025",
       "filename": "./../../ahfmanagement/ahfmanagement.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }
