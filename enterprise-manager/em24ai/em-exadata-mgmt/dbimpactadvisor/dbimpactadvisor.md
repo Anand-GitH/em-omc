@@ -68,7 +68,7 @@ Identify cluster databases whose performance is potentially impacted by other da
 
     ![CPU Allocation](images/cpuallocation.png " ")
 
-2. Expand the cluster **exa03-Cluster-c12** 
+2. Now click on **CPU Impact** & Expand the cluster **exa03-Cluster-c12** 
 
     ![Expand Cluster](images/expandcluster.png " ")
 
@@ -156,32 +156,30 @@ Identify cluster databases whose performance is potentially impacted by other da
     ![Sample AHF Balance Report](images/sampleahfbalancereport.png " ")
     ![Sample AHF Balance Report](images/sampleahfbalancereport2.png " ")
 
-    **Note:**
+## Task 3: Increasing the Amount of CPUs
 
-    *Increasing the Amount of CPUs*
+If there is a need to increase the number of CPUs, we should first examine clusters marked as “Pass.” If these clusters do not have workloads exceeding 70% of their capacity, then adjusting the CPU allocation for their clusters based on the AHF Balancing Report will help ensure the right amount of CPUs are allocated to the database workloads.
+
+1. Select the yellow section of the pie diagram for clusters.
+    ![Filter by pie chart](images/passclusters.png " ")
     
-    If there is a need to increase the number of CPUs, we should first look at clusters marked as “Pass.” These clusters do not have workloads exceeding 70% of their capacity.
+2. This filters the view to only show clusters that pass.
+    ![Passed clusters](images/passedclusters.png " ")
     
-    1. Select the yellow section of the pie diagram for clusters.
-        ![Filter by pie chart](images/passclusters.png " ")
-    
-    2. This filters the view to only show clusters that pass.
-        ![Passed clusters](images/passedclusters.png " ")
-    
-    3. Expand cluster **exa03-Cluster-C10**.
-        ![Expand cluster](images/expandcluster2.png " ")
+3. Expand cluster **exa03-Cluster-C10**.
+    ![Expand cluster](images/expandcluster2.png " ")
 
-    4. This cluster contains a single database **exa03cdb1db10**
-        ![Single database cluster](images/singledbcluster.png " ")
+4. This cluster contains a single database **exa03cdb1db10**
+    ![Single database cluster](images/singledbcluster.png " ")
 
-    5. Expand the database **exa03cdb1db10** and select the instance **exa03cdb1db10_cdb1db102**
-        ![Select CDB 10 database](images/selectcdb10.png " ")
+ 5. Expand the database **exa03cdb1db10** and select the instance **exa03cdb1db10_cdb1db102**
+    ![Select CDB 10 database](images/selectcdb10.png " ")
 
-    6. As we can see, this database never exceeds the red striped line, meaning there are available CPU resources. This allows us to release CPUs from this cluster and reallocate them to exa03-Cluster-C12 without increasing the overall number of allocated CPUs.
+6. As we can see, this database never exceeds the red striped line, meaning there are available CPU resources. This allows us to release CPUs from this cluster and reallocate them to **exa03-Cluster-C12** without increasing the overall number of allocated CPUs.
 
-        ![CPU Usage of CDB 10 database](images/cpuusagecdb101.png " ")
+    ![CPU Usage of CDB 10 database](images/cpuusagecdb101.png " ")
 
-        ![CPU Usage of CDB 10 database](images/cpuusagecdb102.png " ")
+    ![CPU Usage of CDB 10 database](images/cpuusagecdb102.png " ")
 
 
 ## Appendix
