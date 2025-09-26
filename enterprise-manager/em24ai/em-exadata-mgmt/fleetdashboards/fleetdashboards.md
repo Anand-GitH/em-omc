@@ -155,7 +155,7 @@ Exadata Fleet Component Capacity dashboard provides a holistic view of fleet cap
 
 2. On the **Dashboards** page, click on the **Exadata Fleet Component Capacity** dashboard.
 
-    ![Exadata Fleet Component Capacity](images/dashboardmenuy.png " ")
+    ![Exadata Fleet Component Capacity](images/dashboardsmenuy.png " ")
 
 5. Explore **Exadata Fleet Component Capacity**
 
