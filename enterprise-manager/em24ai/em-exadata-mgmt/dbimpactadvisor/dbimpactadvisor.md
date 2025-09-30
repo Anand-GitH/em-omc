@@ -22,7 +22,7 @@ Identify cluster databases whose performance is potentially impacted by other da
 
     ![Landing Page](images/landingpage.png " ")
 
-2. Click the **hamburger menu** icon.
+2. Navigate to **Targets > Exadata**.
 
     ![Enterprise Manager menu icon](images/navigation.png " ")
 
