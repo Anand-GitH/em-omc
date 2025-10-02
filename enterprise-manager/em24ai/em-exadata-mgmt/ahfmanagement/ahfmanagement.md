@@ -17,7 +17,7 @@ Autonomous Health Framework (AHF) is Oracle’s diagnostic and health management
 - Explore how to manage AHF across the fleet
 - Learn how to run Exachk compliance checks across systems
 
-## Task 1: Explore Database Impact Advisor
+## Task 1: Explore AHF Management 
 
 Identify cluster databases whose performance is potentially impacted by other databases or other operating system processes.
 
@@ -25,6 +25,48 @@ Identify cluster databases whose performance is potentially impacted by other da
 
     ![Enterprise Manager login](images/emlogin.png " ")
 
+2. Navigate to **Targets > Exadata**.
+
+    ![Enterprise Manager menu icon](images/navigation.png " ")
+
+3. Click on **Actions > Engineered System Autonomous Health Framework Administration**
+
+    ![Enterprise Manager menu icon](images/ahfnavigation.png " ")
+
+4. Explore **Engineered Systems Tab**
+
+   Engineered Systems tab presents an overview that can be used to determine whether AHF is configured on Engineered System targets according to Oracle-recommended standards.
+
+   - **Total Engineered Systems** – Number of monitored systems, with breakdown of management pack enabled/disabled.
+   - **AHF Upgrade Status** – Current upgrade status across all systems.
+   - **AHF Service Status** – Enablement status of TFA and Exachk services.
+   - **AHF Configurations** – Count of systems with auto-upgrade and autorun turned on or off.
+
+    ![AHF Overview](images/ahfoverview.png " ")
+
+    Expand the **DB Machine exa03.rsthybrid.oracle.com** and check the status of AHF, AHF version, Exachk and TFA service status for its virtual nodes.
+
+    ![Expand the view](images/expandview.png " ")
+
+5. Select the **DB Machine exa03.rsthybrid.oracle.com** and click on **Actions**
+
+     Enterprise Manager provides the below actions to manage AHF. 
+    - Upgrade AHF 
+    - Execute AHF Commands
+    - Upgrade Configuration
+    - Schedule Exachk Autorun
+    - Enable AHF Metrics
+
+    ![Supported actions](images/actions.png " ")
+
+6. Click on **AHF Management Jobs** tab
+
+    AHF Management Jobs provides a summary of all the Oracle Enterprise Manager AHF management jobs run across all Engineered System hosts.
+
+    - Ring charts shows total Engineered Systems, job Status & job type
+    - Table view provides very detailed view of each job that have been run
+
+    ![Job Status](images/ahfjobs.png " ")
 
 ## Learn More
 
