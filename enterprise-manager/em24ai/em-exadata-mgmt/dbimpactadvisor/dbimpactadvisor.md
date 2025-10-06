@@ -46,7 +46,7 @@ Identify cluster databases whose performance is potentially impacted by other da
 
     2. Pie charts show the summary of the number of clusters, cluster databases, database instances, and hosts
 
-        We can see that there are 12 clusters, 23 cluster databases and 46 databases instances running on 24 hosts showing statuses **PASS or INFO**
+        We can see that there are 12 clusters, 23 cluster databases and 46 databases instances running on 24 hosts showing statuses **PASS, INFO, WARNING & FAIL**
 
         - **PASS:** The cluster is not over-provisioned. No exposed or impacted hours are possible.
         - **INFO:** Database is running normally. No exposed or impacted hours were found.
@@ -64,7 +64,7 @@ Identify cluster databases whose performance is potentially impacted by other da
     ![DIV CPU Allocation](images/cpualloctab.png " ")
 
     Here we can see that there are 12 clusters: the largest cluster has 32 cores per node, while the smallest has 12 cores per node.
-    In this lab, we will be analyzing the cluster **exa03-Cluster-c12** and current status of this cluster shows as **INFO**.
+    In this lab, we will be analyzing the cluster **exa03-Cluster-c12** and current status of this cluster shows as **FAIL &  INFO**.
 
     ![CPU Allocation](images/cpuallocation.png " ")
 
@@ -72,7 +72,7 @@ Identify cluster databases whose performance is potentially impacted by other da
 
     ![Expand Cluster](images/expandcluster.png " ")
 
-3. Select the database **exa03cdb1db12** and scroll down on selection to view the CPU Usage
+3. Select the database cluster **exa03cdb1db12** and scroll down on selection to view the CPU Usage
 
     ![Select the database](images/cdb1selection.png " ")
 
@@ -82,12 +82,17 @@ Identify cluster databases whose performance is potentially impacted by other da
 
    ![CDB1 CPU Usage](images/cpuusagecdb1.png " ")
 
-4. Now, select the instance **exa03cdb1db12_cdb1db122** and scroll down on selection to view the CPU Usage for the instance
+4. Now, expand the database cluster **exa03cdb1db12**, select the instance **exa03cdb1db12_cdb1db122** and scroll down on selection to view the CPU Usage for the instance
 
     ![select database instance](images/cdb2selection.png " ")
 
-    Checkout the CPU usage for the instance instance **exa03cdb1db12_cdb1db122** which is operating within its guaranteed CPU limits of 10.67 cores. 
+    Checkout the CPU usage for the instance instance **exa03cdb1db12_cdb1db122** is utilizing CPU resources beyond the guaranteed limit of 10.67 cores.
     ![Check CPU usage of the instance](images/cpuusagecdb2.png " ")
+
+    To identify exactly the impacted hours check **Highlight Impacted Hours** and analyze graph
+
+    ![Check CPU usage for impacted hours](images/cpuusagecdb2impacted.png " ")
+
 
     In the lower graph, you can observe details about other instances running on the same cluster node, along with non-database CPU consumption. This view helps to understand how your database may be impacted by other databases and processes running on the same host.
     ![CPU Usage on the node](images/cpuusagecdb3.png " ")
@@ -106,7 +111,7 @@ Identify cluster databases whose performance is potentially impacted by other da
     ![Check stacked](images/cpuusagecdb3-stacked.png " ")
 
     We can now see the total CPU consumption in the graph and how much each instance is using. The dashed red line represents the 70% utilization level. When the total utilization goes above this threshold, it indicates that one or more databases are impacted. 
-    If a database’s CPU usage is below its guaranteed allocation, but other databases are consuming more, the database may still experience performance impact.
+    If a database’s CPU usage is above its guaranteed allocation, but other databases are consuming more, the database is experiencing performance impact.
     
     ![Result of the stacked](images/cpusagestacked.png " ")
 
@@ -119,15 +124,16 @@ Identify cluster databases whose performance is potentially impacted by other da
 
     **CPU Usage of the instance exa03cdb2db12_cdb2db122**
     ![CPU Usage of database 2](images/cpuusuage-otherinstance1.png " ")
+    ![CPU Usage of database 2](images/cpuusuage-otherinstance2.png " ")
 
     Select database instance **exa03cdb3db12_cdb3db122** as shown below
     ![Select database 3](images/cdb4selection.png " ")
 
     **CPU Usage of the instance exa03cdb3db12_cdb3db122**
     ![CPU Usage of database 3](images/cpuusuage-otherinstance2.png " ")
+    ![CPU Usage of database 3](images/cpuusuage-otherinstance22.png " ")
 
-
-    As we can see, there are times when the databases impact each other, resulting in one or more databases not receiving enough CPU resources.
+    As we can see, two databases are operating at higher than their guaranteed CPU limit and one database is under the guaranteed limit. Two databases are impacted and are experiencing noisy neighbor condition. 
     
     There are two ways to address the issue of **Noisy Neighbor**:
     - Increase the number of CPUs
