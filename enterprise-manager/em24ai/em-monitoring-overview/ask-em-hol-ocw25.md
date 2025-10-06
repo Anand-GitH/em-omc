@@ -225,7 +225,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Welcome Message](ask-em-images/ask-em/ask-em-welcome.png " ")
 
-4. In the Telemetry tab, ask this question:
+4. In the **Telemetry tab**, ask this question:
 
     **How is the performance of my databases?**    
 
@@ -236,13 +236,11 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
     A new set of widgets appear, choose the following:
     - **Aggregate Target Name: Prod-Grp**
     - **Target Type: Database Instance**
-    - **Target Name: cdb186.subnet.vcn.oraclevcn.com**
+    - **Target Name: emrep.us.oracle.com**
 
     ![AskEM Telemetry - Choose target selector info](ask-em-images/ask-em-db-perf/choose-target-details.png " ")
 
     ![AskEM Telemetry - Results of Db performance 1](ask-em-images/ask-em-db-perf/perfdatabase-1.png " ")
-
-    ![AskEM Telemetry - Results of Db performance 2](ask-em-images/ask-em-db-perf/perfdatabase-2.png " ")
 
 5. In the Telemetry tab, ask this question:
 
@@ -258,7 +256,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
 7. In the Telemetry tab, ask this question:
 
-    **What are the top activities on my database**
+    **What are the top activities on my database?**
 
     ![AskEM Telemetry - Top activities on DBs](ask-em-images/ask-em-db-perf/top-activities-1.png " ")
 
