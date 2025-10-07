@@ -31,13 +31,7 @@
       "filename": "./../../chargeback/chargeback.md"
     },
     {
-      "title": "Lab 4: I/O Resource Management Advisor",
-      "description": "The objective of this lab is to become familiar with IORM advisor",
-      "publisheddate": "9/17/2025",
-      "filename": "./../../iormadvisor/iormadvisor.md"
-    },
-    {
-      "title": "Lab 5: Autonomous Health Framework Administration",
+      "title": "Lab 4 (Optional): Autonomous Health Framework Administration",
       "description": "The objective of this lab is to become familiar with AHF Management",
       "publisheddate": "9/17/2025",
       "filename": "./../../ahfmanagement/ahfmanagement.md"
