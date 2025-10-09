@@ -13,9 +13,13 @@ To enable users to configure and implement chargeback for their Exadata Systems 
 
 ## Task 1: Launch Chargeback Home page
 
-1. Log into Enterprise Manager using the credentials **sysman/Cloud2025**. 
+1. Log into Enterprise Manager using the credentials provided in the portal
 
-    ![Enterprise Manager login](images/emlogin.png " ")
+    ![Enterprise Manager credentials](images/emcreds.png " ")
+
+    ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
+
+    ![Landing Page](images/landingpage.png " ")
 
 2. Click the **hamburger menu** icon.
 

@@ -19,9 +19,14 @@ Autonomous Health Framework (AHF) is Oracle’s diagnostic and health management
 
 ## Task 1: Execute AHF Command at Fleet Level
 
-1. Log into Enterprise Manager using the credentials **sysman/Cloud2025**. 
+1. Log into Enterprise Manager using the credentials provided in the portal
 
-    ![Enterprise Manager login](images/emlogin.png " ")
+    ![Enterprise Manager credentials](images/emcreds.png " ")
+
+
+    ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
+
+    ![Landing Page](images/landingpage.png " ")
 
 2. Navigate to **Targets > Exadata**.
 
