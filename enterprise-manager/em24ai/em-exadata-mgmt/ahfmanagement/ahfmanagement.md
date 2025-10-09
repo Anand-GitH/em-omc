@@ -17,6 +17,8 @@ Autonomous Health Framework (AHF) is Oracle’s diagnostic and health management
 - Explore how to manage AHF across the fleet
 - Learn how to run Exachk compliance checks across systems
 
+*Estimated Time*: 15 minutes
+
 ## Task 1: Execute AHF Command at Fleet Level
 
 1. Log into Enterprise Manager using the credentials provided in the portal

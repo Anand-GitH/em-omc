@@ -11,6 +11,8 @@ To enable users to configure and implement chargeback for their Exadata Systems 
 - Learn how to create a charge plan, cost center and associate a target to a specific charge plan
 - Analyze reports detailing the consumption and associated charges
 
+*Estimated Time*: 20 minutes
+
 ## Task 1: Launch Chargeback Home page
 
 1. Log into Enterprise Manager using the credentials provided in the portal
@@ -55,9 +57,11 @@ To enable users to configure and implement chargeback for their Exadata Systems 
 
     ![Charge Plan Tab](images/chargeplantab.png " ")
     
-    We are using the universal charge plan, which allows us to set rates for CPU, memory, and storage. An extended plan can also be used to provide more flexibility in defining rates.
+    **Universal charge plan** establishes rates for three basic metrics (CPU, memory, and storage)
     
-    In this example, the rate is set to $1:
+    **Extended charge plan** enhances the universal plan to include entity-specific metrics
+    
+    In this environment, the rate is set to $11 in the universal plan:
     - CPU is charged per hour
     - Memory is charged per GB/week
     - Storage is charged per GB/month
@@ -65,6 +69,15 @@ To enable users to configure and implement chargeback for their Exadata Systems 
     Both the rate and the time interval can be modified as needed.
 
     ![Charge Plan Details](images/chargeplandetails.png " ")
+
+    We have created **extended charge plan for the Host**, and similarly extended plans can be added to include entity-specific metrics, enhancing the universal plan for more precise charge calculations.
+
+    ![Charge Plan Details](images/chargeplandetails2.png " ")
+
+    To view entity-specific metrics click on the **Charge Item Library**
+    ![Charge Plan Details](images/chargeplandetails3.png " ")
+
+    ![Charge Plan Details](images/chargeplandetails4.png " ")
 
 2. Click on the **Cost Centers** tab 
     ![Cost Centers Tab](images/costcenterstab.png " ")
@@ -83,9 +96,13 @@ To enable users to configure and implement chargeback for their Exadata Systems 
     ![Expanded View](images/expandedview.png " ")
     
     The table shows how much each cost center is charged for a specific month, based on the rates defined in the universal charge plan.
-    *In this environment, chargeback was enabled starting in September. Therefore, you can view charges only for the month of September.*
+    *In this environment, chargeback was enabled starting in September. So, you can view charges for the current month October and also for the month of September.* as shown below.
 
     ![Expanded View September](images/expandview-month.png " ")
+
+    ![Expanded View September](images/expandview-month2.png " ")
+
+    ![Expanded View September](images/expandview-month3.png " ")
 
 ## Task 3: Add entity by associating a Charge Plan and Cost Center
 
@@ -136,16 +153,24 @@ To enable users to configure and implement chargeback for their Exadata Systems 
     *Since all workshop attendees are using the same Enterprise Manager environment, it is not possible to click Submit. Instead, click Cancel.*
     ![Click Cancel](images/reviewcancel.png " ")
 
+    **Note:**
+
     Metrics for the targets that have been added to Chargeback are collected from the Enterprise Manager repository on a daily schedule. Hence, it may take up to 24 hours before charge data appears for any targets that have been added.
     After the collection job has run, the usage and charge data for configured targets will be available from the Reports tab.
 
 4. Review other tabs in the **Entities** page 
 
-    Select the target **emrep.rsthybrid.oracle.com** and on selection shows the collected data under different tabs within Entities page as explained below 
+    Select any target and on selection shows the collected data under different tabs within Entities page as explained below 
+
+    *Here for the flow we have selected target **emrep.rsthybrid.oracle.com***
     ![Entities Details](images/entitiesdetails.png " ")
 
     - Metered Data (Chart) :  View a times series graph of data metrics for the entity
         ![Metric Chart](images/metricchart.png " ")
+
+        For the selected entity, you can view the collected metrics that are available for chargeback calculations and can be added using the extended plan.
+        ![Metric Chart](images/metricchart2.png " ")
+
 
     - Metered Data (Table) :  View the raw metric data collected
         ![Metric Data](images/metricdata.png " ")

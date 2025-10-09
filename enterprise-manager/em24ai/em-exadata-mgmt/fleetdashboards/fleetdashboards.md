@@ -9,7 +9,7 @@ To enable users to efficiently navigate and utilize the Exadata Fleet Dashboards
 - Analyze usage of individual components within an Exadata system
 - Review and analyze metric trends
 
-*Estimated Time*: 20 minutes
+*Estimated Time*: 15 minutes
 
 ## Task 1: Explore Fleet Configuration Dashboard
 
