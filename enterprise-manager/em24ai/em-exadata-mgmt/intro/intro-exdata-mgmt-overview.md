@@ -1,7 +1,7 @@
 ## About this Workshop
 The goal of this workshop is to become familiar with Exadata Management Pack's advanced management and monitoring features for engineered systems using Oracle Enterprise Manager 24ai.
 
-*Estimated Workshop Time*: 95 minutes
+*Estimated Workshop Time*: 75 minutes
 
 ### About Oracle Enterprise Manager 24ai
 Oracle Enterprise Manager 24ai is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
