@@ -185,13 +185,23 @@ them too loosely results in unnecessary hardware and Oracle license costs.
     ![Download or Open AHF report](images/clickahfbalancereport2.png " ")
 
     
-    **We have generated the AHF Balance report beforehand for the lab, and the details of the report are explained below.**
+    **Note: The AHF Balance Report has been pre-generated for this lab.**
+    
+    - Launch new tab in Google Chrome.
+    - Open the following URL to view the AHF Balance Report:
+        ```
+        <copy>
+        tinyurl.com/ahfreport
+        </copy>
+        ```
+    
+    **Details of the report is explained below.**
 
-    The report contains two parts Summary and Actions.
+    The report contains two parts: **Summary and Actions**.
     
-    **Cluster summary for exa03-Cluster-c12** shows that, after adjusting CPUs according to the recommended values, the exposed hours increased and impacted hours are reduced. 
-    
-    However, the database workloads are still operating above their guaranteed limits, which means they may continue to compete for additional CPU resources. So the status under recommendation shows as **FAIL**.
+    Cluster Summary for **exa03-Cluster-c12** shows that, after adjusting the CPUs based on the recommended values, the impacted hours have been reduced.
+
+    However, the database workloads are still running above their guaranteed limits, meaning they may continue to compete for additional CPU resources. As a result, the status under recommendation shows as **FAIL**.
     
     ![AHF Balance Report Summary](images/sampleahfbalancereport.png " ")
     
@@ -202,9 +212,9 @@ them too loosely results in unnecessary hardware and Oracle license costs.
 
     ![AHF Balance Report Summary](images/sampleahfbalancereport3.png " ")
 
-    With these recommended CPU values for each database, the report shows the exposed and impacted hours after the changes, and you can see that both have been reduced for **exa03cdb1db12 & exa03cdb2db12** but increased for **exa03cdb3db12** . However, the database workloads are still operating above their guaranteed limits, which means they may continue to compete for additional CPU resources.
+    With the recommended CPU values for each database, the report shows that the impacted hours for **exa03cdb1db12 and exa03cdb2db12** have been reduced. However, the database workload for **exa03cdb1db12** may still exceed its guaranteed limits, meaning it could continue to compete for additional CPU resources. As a result, the status of **exa03cdb1db12** is shown as FAIL under the recommended section.
 
-    Ideally, the cluster should be allocated more CPUs, or the databases should be moved to a cluster with available capacity.
+    Ideally, the cluster should be allocated additional CPUs, or the databases should be moved to a cluster with available capacity.   
 
     ![Sample AHF Balance Report](images/sampleahfbalancereport4.png " ")
 
