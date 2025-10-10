@@ -30,7 +30,7 @@ Exadata administrators managing large on-premises and cloud-based Exadata fleets
 #### Applicable Enterprise Manager Management Packs
 
 - Exadata Management Pack
-- Oracle Cloud Management Pack
+- Oracle Cloud Management Pack required only for the Chargeback feature covered in the lab 3.
 
 ### Content
 

@@ -1,6 +1,6 @@
 # Chargeback Administration
 ## Introduction
-Chargeback is used to allocate the costs of IT resources to the people or organizations who consume them. Organizations are adopting consolidation platforms such as Oracle Exadata, where there are multiple applications running on a shared hardware platform. There needs to be a way to meter the resources consumed by each application so charges can be applied accordingly. This, in turn, helps to measure the business value of IT investments so that priority can be given to the applications with the greatest return on investment (ROI)
+Chargeback is used to allocate the costs of IT resources to the people or organizations who consume them. Organizations are adopting consolidation platforms such as Oracle Exadata, where there are multiple applications running on a shared hardware platform. Use this feature to meter the resources consumed by each application so that charges can be applied accurately. This, in turn, helps to measure the business value of IT investments so that priority can be given to the applications with the greatest return on investment (ROI).
 
 Adopting a Chargeback (or Showback) model can deliver significant benefits to both IT and Line of Business users:
 - Chargeback benefits consumers by placing them in control of their IT costs.
@@ -20,8 +20,6 @@ To enable users to configure and implement chargeback for their Exadata Systems 
     ![Enterprise Manager credentials](images/emcreds.png " ")
 
     ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
-
-    ![Landing Page](images/landingpage.png " ")
 
 2. Click the **hamburger menu** icon.
 
@@ -143,7 +141,7 @@ To enable users to configure and implement chargeback for their Exadata Systems 
     Select the target and then Click on **Assign Cost Center**
     ![Assign Cost Center](images/assigncostcenter.png " ")
 
-    Select **SALES_NA_PROD** cost center and click **OK**
+    Select **SALES\_NA\_PROD** cost center and click **OK**
     ![Choose Cost Center](images/choosecostcenter.png " ")
 
     Select **Next**

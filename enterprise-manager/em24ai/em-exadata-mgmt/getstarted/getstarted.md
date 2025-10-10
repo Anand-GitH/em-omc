@@ -3,16 +3,18 @@
 ## Introduction
 This lab will show you how to get started with your workshop with a remote desktop session.
 
-Estimated Time: 10 minutes
-
 ### Objectives
 In this lab, you will:
 - Start the remote desktop session
-- Launch Enterprise Manager 24ai
+- Login to Enterprise Manager 24ai
+
+*Estimated Time*: 10 minutes
 
 ### Prerequisites
 
-## Task 1: Start the remote desktop session 
+***Ensure that your browser’s pop-up blocker is disabled before starting the lab, as the remote desktop session will open in a new tab.***
+
+## Task 1: Start the remote desktop session
 
 1. Click on the remote desktop link in the Apex app
 
@@ -64,58 +66,42 @@ In this lab, you will:
     Remote desktop session is getting started
     ![Remote Desktop Session Starting](./images/startrdsstarting.png " ")
 
-    Once ready it opens a remote desktop session in a new tab 
+    Once ready it opens a remote desktop session in a new tab with EM console launched in the chrome.
+
+    *Note: **Ensure that your browser’s pop-up blocker is disabled before starting the lab, as the remote desktop session will open in a new tab.***
+    
     ![Remote Desktop Session Started](./images/startrdsstarted.png " ")
 
-9. Complete the setup as shown below
+## Task 2: Login to Enterprise Manager 24ai
 
-    Click **Next**
-    ![Compute Setup](./images/computesetup.png " ")
+1. Maximize the Chrome browser window
 
-    Click **Next**
-    ![Compute Setup](./images/computesetup2.png " ")
+    Right-click on the Chrome browser by placing your mouse cursor on the area shown below.
+    ![Right click on the chrome](./images/rightclickonchrome.png " ")
 
-    Click **Next**
-    ![Compute Setup](./images/computesetup3.png " ")
+    Click on **Maximize**
+    ![Click on Maximize](./images/maximizechrome.png " ")
 
-   Click **Skip**
-    ![Compute Setup](./images/computesetup4.png " ")
-
-   Click **Start Using Oracle Linux Server**
-    ![Compute Setup](./images/computesetup5.png " ")
-
-   Close the window as shown below
-    ![Compute Setup](./images/computesetup6.png " ")
-
-## Task 2: Launch Enterprise Manager 24ai
-
-1. Launch Firefox by clicking on **Activities > Firefox**
-    ![Launch Firefox](./images/launchfirefox.png " ")
-
-2. Copy the Enterprise Manager 24ai Console URL shown 
-
+    **Note:** 
+    
+    If you accidentally close the Chrome browser, use the following URL to reopen the EM24ai Console:
+    
     ```
     <copy>
     https://osc-em24-01.rsthybrid.oracle.com:7803/em
     </copy>
     ```
 
-3. Paste the Enterprise Manager 24ai URL to the Firefox browser as shown below 
+    Open Chrome and enter the above URL in the address bar to launch EM24ai again.
 
-    Click on the **Send Clipboard** and right click on Firefox address bar and click **paste** and then press **enter**
-
-    ![Copy EM URL](./images/copyemurl.png " ")
-
-    Click on **Advanced** and then click **Accept the Risk and Continue**
-    ![Copy EM URL](./images/skipssl.png " ")
-
-    EM Console is launched and now login with **EM Username** and **EM Password** provided in the Apex app to get started with the workshop.
-
-    ![EM Console](./images/emconsole.png " ")
+2. Login with **EM Username** and **EM Password** provided in the Apex app to get started with the workshop.
 
     ![EM Creds](./images/emcreds.png " ")
 
-    **Note: For the best experience, switch your browser to full-screen mode.**
+    ![EM Console](./images/emconsole.png " ")
+
+
+
 
 You may now **proceed to Lab 1**.
 

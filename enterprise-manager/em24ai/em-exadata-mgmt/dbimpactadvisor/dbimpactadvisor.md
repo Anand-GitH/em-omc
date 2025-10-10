@@ -91,20 +91,20 @@ them too loosely results in unnecessary hardware and Oracle license costs.
 
     ![Expand Cluster](images/expandcluster.png " ")
 
-3. Select the database cluster **exa03cdb1db12 by clicking on its row** *(do not click the cluster name)*, then scroll down to view the CPU usage.
+3. Select the database cluster **exa03cdb1db12 by clicking on its row** *(Clicking on the cluster name opens the cluster home page)*, then scroll down to view the CPU usage.
 
     ![Select the database](images/cdb1selection.png " ")
 
     Chart now shows CPU utilization in cores for this database. Since no CPU_COUNT is set, the database can use all available CPUs when needed. 
     However, the **guaranteed limit is 10.67 cores** because there are two other databases on the cluster. 
     
-    The **light peach area** indicates when the **database exceeds its guaranteed limit**. 
+    The **orange area** indicates when the **database exceeds its guaranteed limit**. 
     
     If this happens, the database may be impacted by other databases and might need to wait for CPU resources.
 
    ![CDB1 CPU Usage](images/cpuusagecdb1.png " ")
 
-4. Now, expand the database cluster **exa03cdb1db12**, select the instance **exa03cdb1db12_cdb1db122 by clicking on its row** *(do not click the instance name)* and scroll down on selection to view the CPU Usage for the instance
+4. Now, expand the database cluster **exa03cdb1db12**, select the instance **exa03cdb1db12_cdb1db122 by clicking on its row** *(Clicking on the instance name opens the instance home page)* and scroll down on selection to view the CPU Usage for the instance
 
     ![select database instance](images/cdb2selection.png " ")
 
@@ -140,14 +140,14 @@ them too loosely results in unnecessary hardware and Oracle license costs.
 
     Review the CPU consumption for each of these databases to compare their usage and understand how they are affected relative to the total consumption on the node.
 
-    Select database instance **exa03cdb2db12_cdb2db122 by clicking on its row** *(do not click the instance name)* as shown below
+    Select database instance **exa03cdb2db12_cdb2db122 by clicking on its row** *(Clicking on the instance name opens the instance home page)* as shown below
     ![Select database 2](images/cdb3selection.png " ")
 
     **CPU Usage of the instance exa03cdb2db12_cdb2db122**
     ![CPU Usage of database 2](images/cpuusuage-otherinstance1.png " ")
     ![CPU Usage of database 2](images/cpuusuage-otherinstance12.png " ")
 
-    Select database instance **exa03cdb3db12_cdb3db122 by clicking on its row** *(do not click the instance name)* as shown below
+    Select database instance **exa03cdb3db12_cdb3db122 by clicking on its row** *(Clicking on the instance name opens the instance home page)* as shown below
     ![Select database 3](images/cdb4selection.png " ")
 
     **CPU Usage of the instance exa03cdb3db12_cdb3db122**
@@ -159,10 +159,10 @@ them too loosely results in unnecessary hardware and Oracle license costs.
     As a result, **exa03cdb1db12\_cdb1db122 and exa03cdb2db12\_cdb2db122** are impacted and experiencing noisy neighbor conditions. **Database Impact Advisor** detects these issues and marks such databases status as **FAIL**, indicating that these databases need attention and require CPU adjustment.
 
     There are two ways to address the issue of **Noisy Neighbor**:
-    - Increase the number of CPUs
-    - Adjust the CPU_COUNT to minimize conflicts, using recommendations from the AHF Balancing Report
+    - Increase the number of CPUs on the node (virtual machine)
+    - Adjust the CPU_COUNT on the database instance using recommendations from the AHF Balance Report
 
-    Since increasing CPUs can lead to wasted resources, adjusting CPU_COUNT based on AHF balancing report will be our preferred approach.
+    Since increasing CPUs can lead to wasted resources, adjusting CPU_COUNT based on AHF Balance report will be our preferred approach.
     
 7. Generate AHF Balance Report 
 
@@ -175,8 +175,9 @@ them too loosely results in unnecessary hardware and Oracle license costs.
     Click on the **Generate AHF Balance Report**
     ![Generate ahf balance report](images/generateahfbalance.png " ")
 
-    Click **Yes**
-    ![Click Yes](images/clickahfbalancereport1.png " ")
+    When generating for the first time, you will be prompted to enter the Enterprise Manager password.
+    Enter password **welcome1** and then click **Yes**
+    ![Enter EM Password](images/ahfbalancereportpwd.png " ")
 
     A job will be submitted and it takes sometime for the job to be completed.
 
@@ -188,9 +189,9 @@ them too loosely results in unnecessary hardware and Oracle license costs.
 
     The report contains two parts Summary and Actions.
     
-    **Cluster summary for exa03-Cluster-c12** shows that, even after adjusting CPUs according to the recommended values, the exposed and impacted hours are reduced. 
+    **Cluster summary for exa03-Cluster-c12** shows that, after adjusting CPUs according to the recommended values, the exposed hours increased and impacted hours are reduced. 
     
-    However, the database workloads are still operating above their guaranteed limits, which means they may continue to compete for additional CPU resources.
+    However, the database workloads are still operating above their guaranteed limits, which means they may continue to compete for additional CPU resources. So the status under recommendation shows as **FAIL**.
     
     ![AHF Balance Report Summary](images/sampleahfbalancereport.png " ")
     
@@ -201,7 +202,7 @@ them too loosely results in unnecessary hardware and Oracle license costs.
 
     ![AHF Balance Report Summary](images/sampleahfbalancereport3.png " ")
 
-    With these recommended CPU values for each database, the report shows the exposed and impacted hours after the changes, and you can see that both have been reduced. However, the database workloads are still operating above their guaranteed limits, which means they may continue to compete for additional CPU resources.
+    With these recommended CPU values for each database, the report shows the exposed and impacted hours after the changes, and you can see that both have been reduced for **exa03cdb1db12 & exa03cdb2db12** but increased for **exa03cdb3db12** . However, the database workloads are still operating above their guaranteed limits, which means they may continue to compete for additional CPU resources.
 
     Ideally, the cluster should be allocated more CPUs, or the databases should be moved to a cluster with available capacity.
 
@@ -224,7 +225,7 @@ If there is a need to increase the number of CPUs, start by examining clusters m
 4. This cluster contains a single database **exa03cdb1db10**
     ![Single database cluster](images/singledbcluster.png " ")
 
- 5. Expand the database **exa03cdb1db10** and select the instance **exa03cdb1db10_cdb1db102 by clicking on its row** *(do not click the instance name)*
+ 5. Expand the database **exa03cdb1db10** and select the instance **exa03cdb1db10_cdb1db102 by clicking on its row** *(Clicking on the instance name opens the instance home page)*
     ![Select CDB 10 database](images/selectcdb10.png " ")
 
 6. As we can see, this database never exceeds the red striped line, meaning there are available CPU resources. This allows us to release CPUs from this cluster and reallocate them to **exa03-Cluster-C12** without increasing the overall number of allocated CPUs.
