@@ -1,5 +1,5 @@
 ## About this Workshop
-The goal of this workshop is to become familiar with Exadata Management Pack's advanced management and monitoring features for engineered systems using Oracle Enterprise Manager 24ai.
+The goal of this workshop is to become familiar with some of the advanced management and monitoring features in Exadata Management Pack using Oracle Enterprise Manager 24ai
 
 *Estimated Workshop Time*: 75 minutes
 
