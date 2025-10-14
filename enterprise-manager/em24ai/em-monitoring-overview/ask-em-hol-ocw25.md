@@ -205,74 +205,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Close Session](ask-em-images/ask-em-monitoring/ask-em-tel13.png " ")
 
-## Task 2B: Ask EM Assistant — Database Performance
-
-The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
-
-**Note: AI-generated responses may vary each time and might not exactly match the documented lab instructions results.**
-
-1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
-
-    ![Enterprise Manager login](ask-em-images/em24-login.png " ")
-
-2. In the upper right corner, click on the **Ask EM assistant icon** to start it.
-
-    **Note: If the Ask EM assistant does not launch, refresh the browser and try again.**
-
-    ![Start AskEM](ask-em-images/ask-em/ask-em-start.png " ")
-
-3. The Ask EM assistant should appear with a welcome message:
-
-    ![AskEM Welcome Message](ask-em-images/ask-em/ask-em-welcome.png " ")
-
-4. In the **Telemetry tab**, ask this question:
-
-    **How is the performance of my databases?**    
-
-    **Click on “Open” to see findings.**
-
-    ![AskEM Telemetry - Click on Open to see findings](ask-em-images/ask-em-db-perf/click-on-open.png " ")
-
-    A new set of widgets appear, choose the following:
-    - **Aggregate Target Name: Prod-Grp**
-    - **Target Type: Database Instance**
-    - **Target Name: emrep.us.oracle.com**
-
-    ![AskEM Telemetry - Choose target selector info](ask-em-images/ask-em-db-perf/choose-target-details.png " ")
-
-    ![AskEM Telemetry - Results of Db performance 1](ask-em-images/ask-em-db-perf/perfdatabase-1.png " ")
-
-5. In the Telemetry tab, ask this question:
-
-    **Is there a spike in average active sessions on my database?**
-
-    ![AskEM Telemetry - Spike in Avg Active Sessions](ask-em-images/ask-em-db-perf/spike-aas-1.png " ")
-
-6. In the Telemetry tab, ask this question:
-
-    **Show me used and allocated space usage on my database.**
-
-    ![AskEM Telemetry - Allocated space usage on DBs](ask-em-images/ask-em-db-perf/space-allocated-used-1.png " ")
-
-7. In the Telemetry tab, ask this question:
-
-    **What are the top activities on my database?**
-
-    ![AskEM Telemetry - Top activities on DBs](ask-em-images/ask-em-db-perf/top-activities-1.png " ")
-
-8. Go to the **Documentation** tab, ask this question:
-
-    **How to troubleshoot busy wait events?**
-
-    ![AskEM Documentation - Troubleshoot busy wait events 1](ask-em-images/ask-em-db-perf/documentation-2.png " ")
-
-    ![AskEM Documentation - Troubleshoot busy wait events 2](ask-em-images/ask-em-db-perf/documentation-3.png " ")
-
-9. Now **Close** the Ask EM session.
-
-    ![AskEM Close Session](ask-em-images/ask-em/ask-em-close.png " ")
-
-## Task 2C: Ask EM Assistant — Database Patching and Compliance
+## Task 2B: Ask EM Assistant — Database Patching and Compliance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
