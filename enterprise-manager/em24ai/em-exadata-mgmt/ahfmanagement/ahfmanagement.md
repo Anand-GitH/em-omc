@@ -21,11 +21,11 @@ Autonomous Health Framework (AHF) is Oracle’s diagnostic and health management
 
 ## Task 1: Execute AHF Command at Fleet Level
 
-1. Log into Enterprise Manager using the credentials provided in the portal
+1. Log into Enterprise Manager using the credentials provided below
 
-    ![Enterprise Manager credentials](images/emcreds.png " ")
-
-
+    - **Username: sysman**
+    - **Password: Cloud2025**
+    
     ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
 
     ![Landing Page](images/landingpage.png " ")
