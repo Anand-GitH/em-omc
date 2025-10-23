@@ -15,10 +15,7 @@ To enable users to efficiently navigate and utilize the Exadata Fleet Dashboards
 
 Exadata Fleet Configuration dashboard shows the Exadata hardware and software configurations across the Exadata and Recovery Appliance fleet, based on the last known metric collection. You can apply the filters to limit the display to a subset of systems.
 
-1. Log into Enterprise Manager using the credentials provided in the portal
-
-    ![Enterprise Manager credentials](images/emcreds.png " ")
-
+1. Log into Enterprise Manager
 
     ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
 

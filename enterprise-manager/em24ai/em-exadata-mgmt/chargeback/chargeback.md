@@ -15,9 +15,7 @@ To enable users to configure and implement chargeback for their Exadata Systems 
 
 ## Task 1: Launch Chargeback Home page
 
-1. Log into Enterprise Manager using the credentials provided in the portal
-
-    ![Enterprise Manager credentials](images/emcreds.png " ")
+1. Log into Enterprise Manager
 
     ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
 

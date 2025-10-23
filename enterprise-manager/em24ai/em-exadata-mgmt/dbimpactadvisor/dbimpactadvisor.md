@@ -18,10 +18,7 @@ them too loosely results in unnecessary hardware and Oracle license costs.
 
 *Note: This is a live environment, so the charts and data shown in the screenshots may vary from what you see in Enterprise Manager when you perform the workshop.*
 
-1. Log into Enterprise Manager using the credentials provided in the portal
-
-    ![Enterprise Manager credentials](images/emcreds.png " ")
-
+1. Log into Enterprise Manager
 
     ![Enterprise Manager login](images/enterprisemanagerlogin.png " ")
 
