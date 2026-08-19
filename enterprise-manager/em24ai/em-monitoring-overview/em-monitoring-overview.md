@@ -40,9 +40,11 @@ This lab assumes you have:
   | **3A**  | Use Dynamic Runbooks for Incidents                             | 10 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue, enabling consistency in incident response.                                                                                                                                          
   | **3B**  | Create Dynamic Runbooks for Incidents                              | 20 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue, enabling consistency in incident response.  
    | **3C**  | Use Dynamic Runbooks for Metrics                               | 10 minutes       | Start a Dynamic Runbook session against a metric in the All Metrics page.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue, enabling you to prevent impending issues from becoming incidents.  
-   | **3D**  | Dynamic Runbooks for Notification Backlog (Universal Context)                              | 5 minutes       | Start a universal context Dynamic Runbook session against a notifications backlog.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  Universal context runbooks can be used in any functional area in Enterprise Manager.
-   | **3E**  | Access Dynamic Runbook Samples                              | 3 minutes       | View Dynamic Runbook samples available for download.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue. These samples enable you to get started immediately with your use of Dynamic Runbooks.
-   | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
+  | **3D**  | Dynamic Runbooks for Notification Backlog (Universal Context)                              | 5 minutes       | Start a universal context Dynamic Runbook session against a notifications backlog.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  Universal context runbooks can be used in any functional area in Enterprise Manager.
+  | **3E**  | Access Dynamic Runbook Samples                              | 3 minutes       | View Dynamic Runbook samples available for download.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue. These samples enable you to get started immediately with your use of Dynamic Runbooks.
+  | **3F**  | Create Dynamic Runbooks from Oracle-provided Runbooks      | 15 minutes      | Create, customize, and publish a Dynamic Runbook based on an Oracle-provided runbook.                         | Dynamic Runbooks enable you to adapt documented best practices to your organization's specific requirements while preserving a consistent operational procedure.
+  | **3G**  | Use Dynamic Runbooks Created from Oracle-provided Runbooks | 10 minutes      | Start a universal runbook session and execute the customized runbook created in Task 3F.                     | Dynamic Runbook sessions provide guided, repeatable execution of operational procedures and show how auto-run steps can accelerate triage.
+  | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
   | **5**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **6**  | Metric Extensions                          | 10 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **7**  | Monitoring Templates                          | 5 minutes       | Create a Monitoring Template from a Database Instance target. Deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise. | Monitoring Templates enable you to define and implement monitoring standards across all targets in your environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -50,6 +52,13 @@ This lab assumes you have:
   | **9**  | Incident Rules                          | 10 minutes       | Review out-of-the-box incident rules shipped with Enterprise Manager. View an example of an incident compression rule set. Create a simple incident rule set to email DBA when there is a critical DB alert. | Incident Rules enable you to automate common incident management and notification actions such as creation of incidents based on events, sending email to IT Staff, opening tickets, auto-assigning incidents, escalating incidents, etc.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
   | **10A** | Event Compression Policies                | 10 minutes |      View the out-of-box Event Compression Policies to reduce your incidents and create your own policy. | Event Compression Policies reduce overall event noise by compressing related events into a smaller set of actionable incidents.|                            
   | **10B** | Event Compression Analysis                | 10 minutes |      Test your policy using the Event Compression Analysis tool. | An Event Compression Analysis assesses the impact Event Compression Policies would have had on events that generated incidents over a selected time range in the past.
+  | **10C** | Event Compression Policies using Administration Groups | 10 minutes | Review and edit an Event Compression Policy that groups events from database targets by Administration Group. | Administration Group-based event compression reduces event noise while preserving meaningful groupings for related database targets.
+  | **11A** | Dashboards Overview | 5 minutes | Review dashboards, global filters, and available widgets. | Dashboards provide custom operational and business views of Enterprise Manager data.
+  | **11B** | Create Dashboard | 15 minutes | Duplicate and edit a dashboard, configure widget inputs, and add local widget filters. | Custom dashboards organize the data and widgets needed for specific operational requirements.
+  | **11C** | Share Dashboards with Other Users | 5 minutes | Grant another user permission to view a dashboard. | Dashboard sharing enables users to collaborate while respecting target-level privileges.
+  | **11D** | Share Dashboards Across EM Sites | 5 minutes | Export a dashboard and import it into another Enterprise Manager site. | Dashboard export and import support promotion of tested dashboards between environments.
+  | **11E** | Create Custom Widget | 15 minutes | Create a query-based widget that displays members of a group and connect it to a dashboard filter. | Custom widgets extend dashboards with focused views of repository or target data.
+  | **11F** | Edit a Custom Widget via JSON Editing | 10 minutes | Edit a widget JSON definition to add links from target names to target home pages. | JSON editing enables advanced widget behavior and target-specific drilldowns.
   |
 
 ## Task 1: Enterprise Summary
@@ -119,7 +128,6 @@ Incident Manager provides in one location the ability to search, view, manage, a
 3. Navigate to "Enterprise >> Monitoring >> Incident Manager".
 
      ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
-
 
 4. In Incident Manager, you can use any of the Out-of-box Views to quickly filter the list of incidents to the subset you're interested in, e.g., My open incidents and problems. You can create your own views and share with others as well. By default, “All open incidents” view is displayed.
 
@@ -763,13 +771,233 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
      ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
 
 4. Notice a yellow box on the top of the page that says "Use Dynamic Runbooks to triage your incidents". Click on the arrow to expand it.
+
      ![Dynamic Runbooks Yellow Box](images/sample-runbooks/yellow-box.png " ")
 
 5. In the expanded pane, notice there is a link to a MOS note. While you cannot click on the MOS note link in this lab due to environment restrictions, this is something you can do in your own EM site.
+
      ![Dynamic Runbooks Yellow Box Expanded](images/sample-runbooks/yellow-box-expanded.png " ")
 
 6. When you are able to access the MOS note from your EM site, you can see there are three example runbooks available: **FRA (Fast Recovery Area) Runbook**, **Database Tablespace Full Triage Runbook**, and **CPU Utilization Runbook**. Follow the steps in the **Solution** section to download the sample runbooks and install them in your Enterprise Manager site.
+
      ![Dynamic Runbooks Yellow Box Expanded](images/sample-runbooks/mos-note.png " ")
+
+
+## Task 3F: Create Dynamic Runbooks from Oracle-provided Runbooks
+
+Dynamic Runbooks capture best practice procedures in the form of executable steps that ITOps teams follow to prevent or resolve an issue. They can be executed inside Enterprise Manager (EM) in context of a metric, incident, or any other EM context (universal context).
+
+In this lab, you will see how you can create a Dynamic Runbook based on an Oracle-provided Runbook. This is useful in scenarios where you would like to customize an Oracle-provided Runbook for your specific requirements.
+
+1. Log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager welcome page](images/create-runbook-fromoob/emmontask3fstep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/create-runbook-fromoob/emmontask3fstep2.png " ")
+
+3. Navigate to **Enterprise >> Monitoring >> Runbooks**.
+
+![Navigate to Runbooks](images/create-runbook-fromoob/emmontask3fstep3.png " ")
+
+4. In the Runbooks page, you will see two tabs: **Drafts** and **Published**.
+
+    - The **Drafts** tab contains runbooks that are currently being edited.
+    - The **Published** tab contains runbooks that are published and ready for use.
+
+![Runbooks page](images/create-runbook-fromoob/emmontask3fstep4.png " ")
+
+5. Click on the **Published** tab.  
+
+![Runbooks page](images/create-runbook-fromoob/emmontask3fstep5a.png " ")
+
+The list of published runbooks should appear.
+
+![Published Runbooks page](images/create-runbook-fromoob/emmontask3fstep5b.png " ")
+
+6. Locate the runbook called **Triage Notification Backlog (Oracle)**. This is an Oracle-provided runbook that you can use when you notice that there is a large backlog of notifications, such as email notifications, pending delivery. To create a new runbook based on this runbook, click the three dots under **Actions** and select **Create Like**.
+
+![Select Triage Notification Backlog Runbook](images/create-runbook-fromoob/emmontask3fstep6.png " ")
+
+7. In the confirmation dialog, verify that you want to create a new runbook based on the **Triage Notification Backlog (Oracle)** runbook, and click **OK**.
+
+![Confirmation dialog](images/create-runbook-fromoob/emmontask3fstep7.png " ")
+
+8. A new runbook is created in draft mode. Click the pencil icon to edit the name of the runbook. Name it **My Triage Notification Backlog**, or choose a similar name. Click the check mark next to the name to save it.
+
+![Update Runbook name](images/create-runbook-fromoob/emmontask3fstep8.png " ")
+
+9. Scroll down the page to scan the steps provided to triage the notification backlog.
+
+![Review Runbook](images/create-runbook-fromoob/emmontask3fstep9.png " ")
+
+10. Let's add a new step to check the SMTP gateway server. Click **Add a Step** and select **Note**.
+
+![Add Note Step](images/create-runbook-fromoob/emmontask3fstep10.png " ")
+
+11. A **Note** step can be used to provide instructions, link to a website, or link to another page in Enterprise Manager. In this step, you will add a link to the Mail Servers page in Enterprise Manager.   
+For the **Title** field, enter **Check Mail server**.
+
+![Add Note Step - Title](images/create-runbook-fromoob/emmontask3fstep11.png " ")
+
+12. In the body of the step, copy the following lines and paste them into the body of the step:
+
+ ```text
+Go to the Mail Servers page and verify that the Mail (SMTP) server has been set up.
+
+Here is the link to the page: [Mail Servers](/em/faces/core-notif-mailServerSetup)
+ ```
+
+![Add Note Step - Body](images/create-runbook-fromoob/emmontask3fstep12.png " ")
+
+13. Click **Save Step**.
+
+![Add Note Step - Save](images/create-runbook-fromoob/emmontask3fstep13.png " ")
+
+14. The new step is added at the end of the existing steps. Move it to the top by clicking the **move to first** link.
+
+![Move Note step to first](images/create-runbook-fromoob/emmontask3fstep14.png " ")
+
+15. **Scroll up** to verify that the step has been moved to the top, just below the **Overview & Prerequisites** step.
+
+![Note step moved to top](images/create-runbook-fromoob/emmontask3fstep15.png " ")
+
+16. You can also choose to have steps set as **auto-run**. When a user starts using the runbook in a runbook session, auto-run steps execute automatically. This is useful for steps that gather preliminary information for the user to review later in the runbook session. Let's enable auto-run for selected steps.
+
+Click the pencil icon on **Step 3** to edit it.
+
+![Note step moved to top](images/create-runbook-fromoob/emmontask3fstep16.png " ")
+
+17. In Step 3, move the slider at the top to enable **Auto Run**.
+The instruction text describes what this step will do -- counts the pending notification messages. The actual SQL query is not shown because it accesses internal tables.
+
+![Step 3 - Auto-run](images/create-runbook-fromoob/emmontask3fstep17.png " ")
+
+18. Click **Run** to see the output of the step.
+
+![Step 3 - Output](images/create-runbook-fromoob/emmontask3fstep18.png " ")
+
+19. Click **Save Step**.
+
+![Step 3 - Save](images/create-runbook-fromoob/emmontask3fstep19.png " ")
+
+20. Click the pencil icon for **Step 4**.
+
+![Step 4 - Edit](images/create-runbook-fromoob/emmontask3fstep20.png " ")
+
+21. Enable **Auto-Run** for Step 4 and click **Save Step**.
+
+![Step 4 - Auto-Run](images/create-runbook-fromoob/emmontask3fstep21.png " ")
+
+22. Click the pencil icon for **Step 5**.
+
+![Step 5 - Edit](images/create-runbook-fromoob/emmontask3fstep22.png " ")
+
+23. Enable **Auto-Run** for Step 5 and click **Save Step**.
+
+![Step 5 - Auto-Run](images/create-runbook-fromoob/emmontask3fstep23.png " ")
+
+24. Keep the other steps unchanged. Your edits are saved automatically. Click **Runbooks** at the top of the page to return to the main Runbooks page.
+
+![Return to Runbooks](images/create-runbook-fromoob/emmontask3fstep24.png " ")
+
+25. In the **Actions** menu for your runbook, select **Publish**.
+
+![Publish Runbooks](images/create-runbook-fromoob/emmontask3fstep25.png " ")
+
+26. In the confirmation dialog, click **OK**.
+
+![Confirm Publish Rubook](images/create-runbook-fromoob/emmontask3fstep26.png " ")
+
+**Note:** A draft copy of your runbook is automatically created in case you want to make future edits.
+
+27. Your published runbook is now ready for general use.
+
+![Published Rubook](images/create-runbook-fromoob/emmontask3fstep27.png " ")
+
+
+## Task 3G: Using Dynamic Runbooks Created from Oracle-provided Runbooks
+
+Complete **Task 3F: Create Dynamic Runbooks from Oracle-provided Runbooks** before beginning this task.
+
+This task shows you how to use the runbook created in Task 3F.
+
+1. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/using-runbook-fromoob/emmontask3gstep1.png " ")
+
+2. Navigate to **Enterprise >> Monitoring >> Runbook Sessions**.
+
+![Navigate to Runbook Sessions](images/using-runbook-fromoob/emmontask3gstep2.png " ")
+
+3. Click **Start Universal Runbook Session**.
+
+![Start Universal Runbook Session](images/using-runbook-fromoob/emmontask3gstep3.png " ")
+
+**Note:** Because the runbook you created in Task 3F is based on universal context, you can use it from a universal runbook session.  Universal context means it can be used for any EM object.
+
+4. Click the arrow next to your runbook.
+
+![Start Runbook Session](images/using-runbook-fromoob/emmontask3gstep4.png " ")
+
+5. A session starts using your runbook. **Notice the panel on the right**, which outlines all the steps in the runbook. Some steps are grayed out and have a check mark; these steps were set to **Auto-Run** and executed successfully. The other steps are available to execute.
+
+![Runbook Auto-run steps](images/using-runbook-fromoob/emmontask3gstep5.png " ")
+
+6. Click **> Less Info** to hide the panel of steps.
+
+![Click Less Info](images/using-runbook-fromoob/emmontask3gstep6.png " ")
+
+7. Use the vertical scrollbar on the right to scroll up to the first step.
+
+![Vertical scroll up](images/using-runbook-fromoob/emmontask3gstep7.png " ")
+
+8. Review **Step 1: Overview & Prerequisites** and then **click on its checkbox** to indicate that you are done with the step.
+
+![Step 1 done](images/using-runbook-fromoob/emmontask3gstep8.png " ")
+
+9. Review **Step 2**. **Click** the link to **Mail Servers**. 
+
+![Step 2 - Mail Servers link](images/using-runbook-fromoob/emmontask3gstep9.png " ")
+
+It should open a new tab showing the configured Mail Servers. For this lab, assume that the configuration is correct.
+
+![Mail Servers](images/using-runbook-fromoob/emmontask3gstep9b.png " ")
+
+10. **Click on the first browser tab** to return to your runbook session.
+
+![Notifcation Backlog Runbook Session](images/using-runbook-fromoob/emmontask3gstep10.png " ")
+
+11. **Click Step 2** to mark it done.
+
+![Step 2 - Done](images/using-runbook-fromoob/emmontask3gstep11.png " ")
+
+12. Review **Step 3**. This step has been auto-run. Check if there is a current notification backlog (i.e., table has a non-zero count of pending notification messages)
+
+![Step 3 - Notification backlog](images/using-runbook-fromoob/emmontask3gstep12.png " ")
+
+**Note:** This EM site does not actually have a notification backlog, but the purpose of the lab is to become familiar with the runbook steps.
+
+13. Review the output of **Step 4**, which has been auto-run.
+
+![Step 4 - Verify AQ](images/using-runbook-fromoob/emmontask3gstep13.png " ")
+
+14. In Step 4's table, if both columns `ENQUEUE_ENABLED` and `DEQUEUE_ENABLED` show **YES**, click **Go to Step 7**.
+
+![Step 4 - Click on Go to Step 7](images/using-runbook-fromoob/emmontask3gstep14.png " ")
+
+15. In **Step 7**, click the **Play** button.
+
+![Step 7 - Click play](images/using-runbook-fromoob/emmontask3gstep15.png " ")
+
+16. If the COUNT OF UNASSIGNED QUEUES is zero, there is no problem with notification queues.
+
+![Step 7 - Unassigned Queues](images/using-runbook-fromoob/emmontask3gstep16.png " ")
+
+17. At this point, you can stop this task. These last two tasks demonstrated how to troubleshoot a notification backlog, customize an Oracle-provided runbook, configure steps to run automatically, and review the output of those steps.
+
+Optional: To become familiar with general runbook features, complete **Tasks 3A, 3B, 3C, and 3D**.
 
 
 ## Task 4: Metric and Collection Settings
@@ -1634,6 +1862,635 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
 
 
+## Task 10C: Event Compression Policies Using Administration Groups
+
+In Task 10A, you created an Event Compression Policy that compressed, or grouped, events by Database System. In this task, you will see how Enterprise Manager also allows you to compress or group events by Administration Groups.
+
+1. Log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/event-compression/emmontask10cstep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/event-compression/emmontask10cstep2.png " ")
+
+3. Navigate to **Setup > Incidents > Event Compression Policies**.
+
+![Navigate to Event Compression Policies](images/event-compression/emmontask10cstep3.png " ")
+
+4. Review the available policies. Enterprise Manager provides several Oracle-provided Event Compression Policies covering common use cases. You can also author your own custom policies.  In this task you wil review and edit the custom policy that has already been created for you.  
+
+   Locate the policy **Target down, metric alerts for databases in Administration Groups**. Open its **Actions** menu and select **Edit**.
+
+![Edit policy](images/event-compression/emmontask10cstep4.png " ")
+
+5. In the **Event Compression Logic** subsection, verify that the policy applies to the following:
+
+    - **Event types:** Target Availability, Metric Alert
+    - **Target types:** Database Instance, Database System, Pluggable Database
+    - **Event severity:** Fatal, Critical, Warning
+
+![Edit policy - review events](images/event-compression/emmontask10cstep5.png " ")
+
+6. Continue editing the policy by specifying the following settings:
+
+    - **Within this time window:** 60 minutes
+
+![Edit policy - Time window](images/event-compression/emmontask10cstep6a.png " ")
+
+- **Compress Into One Incident by:** Same administration group
+
+![Edit policy - Group by](images/event-compression/emmontask10cstep6b.png " ")
+
+7. Leave the default values for **Incident Message** unchanged and click **Save**.
+
+![Edit policy - Save](images/event-compression/emmontask10cstep7.png " ")
+
+10. When this policy is enabled and published, it will compress, or group, all target-down events and metric alerts from database targets belonging to the same administration group into one incident. For example, if 10 events come from database targets that belong to two different administration groups, the events are compressed into two incidents: one incident containing events from targets in the first administration group and a second incident containing events from targets in the second administration group.
+
+ **Note:** We will not publish this policy for this lab.  However, if you were to implement this policy in your own EM sites, in addition to publishing the policy, you must also enable Event Compression in your Incident Rule Sets to use Event Compression Policies.
+
+
+## Task 11A: Dashboards Overview
+
+Dashboards enable you to create custom solutions to meet specific operational or business requirements. In this task, you will get an overview of Enterprise Manager dashboards and become familiar with using dashboards, creating and editing dashboards, and sharing dashboards.
+
+1. Log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/dashboards/emmontask11astep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/dashboards/emmontask11astep2.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+![Navigate to Dashboards](images/dashboards/emmontask11astep3.png " ")
+
+4. Review the list of dashboards created by Oracle and other users. The description associated with each dashboard provides a summary of the dashboard's purpose.
+
+![Dashboards list](images/dashboards/emmontask11astep4.png " ")
+
+5. Locate and click the **Group Summary** dashboard.
+
+![Dashboards - Group Summary](images/dashboards/emmontask11astep5.png " ")
+
+6. The Group Summary dashboard provides an overview of the status and health of the members of the group shown at the top of the dashboard.
+
+![Group Summary dashboard](images/dashboards/emmontask11astep6.png " ")
+
+7. Review the **Composite Target Name** global filter at the top of the dashboard. It allows you to switch to a different group. It is called a global filter because changing its value updates the data shown in all visual elements in the dashboard. These visual elements are called **widgets**.
+
+![Group Summary dashboard - filter and widgets](images/dashboards/emmontask11astep7.png " ")
+
+8. Change the **Composite Target Name** filter to **Demo-Group**. Notice how the data is updated across all widgets.
+
+![Group Summary dashboard - Demo-Group](images/dashboards/emmontask11astep8.png " ")
+
+9. Click the **Dashboards** breadcrumb at the top of the page to return to the main Dashboards page.
+
+![Dashboards breadcrumb](images/dashboards/emmontask11astep9.png " ")
+
+10. From the Dashboards page, click **Show widgets**.
+
+![Show widgets button](images/dashboards/emmontask11astep10.png " ")
+
+11. Review the widgets available for use in dashboards.
+
+![Widgets list](images/dashboards/emmontask11astep11.png " ")
+
+12. Click **Close** to return the the Dashboards page.
+
+![Widgets list](images/dashboards/emmontask11astep12.png " ")
+
+
+## Task 11B: Create Dashboard
+
+There are two ways to create a new dashboard: build it from scratch or duplicate an existing dashboard and edit it.  
+In this task, you will create a dashboard by duplicating an existing dashboard.
+
+1. If needed, log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/dashboards/emmontask11bstep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/dashboards/emmontask11bstep2.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+![Navigate to Dashboards](images/dashboards/emmontask11bstep3.png " ")
+
+4. On the main Dashboards page, locate the **Group Summary** dashboard. In the same row, open the three-dot **Actions** menu and select **Duplicate**.
+
+![Duplicate Dashboard](images/dashboards/emmontask11bstep4.png " ")
+
+5. In the confirmation dialog, change the name to **My Group Summary** and click **OK**.
+
+![Confirm dashboard creation](images/dashboards/emmontask11bstep5.png " ")
+
+6. A new dashboard is created based on the "Group Summary" dashbaord.  Locate and click your **My Group Summary** dashboard.
+
+![My Group Summary dashboard](images/dashboards/emmontask11bstep6.png " ")
+
+7. Now let us edit the dashboard.  In the top-right corner, open the **Actions** menu and select **Edit**.
+
+![Dashboard - Action - Edit](images/dashboards/emmontask11bstep7.png " ")
+
+8. This is the dashboard in Edit mode.  In the top section, you can edit and remove global filters.  On the right panel, notice how you can add more widgets or filters to the dashboard.  You can also edit or remove individual widgets.
+
+![My Group Summary dashboard - Edit mode](images/dashboards/emmontask11bstep8a.png " ")
+
+Remove the existing **Incidents (Last 7 Dasys)** widget by opening its three-dot **Actions** menu and selecting **Delete**.
+
+![Delete Incidents widget](images/dashboards/emmontask11bstep8b.png " ")
+
+9. In the confirmation dialog, click **Delete**.
+
+![Delete confirmation](images/dashboards/emmontask11bstep9.png " ")
+
+10. In the Widgets list on the right panel of the dashboard, search for **incidents**.
+
+![Incidents widgets](images/dashboards/emmontask11bstep10.png " ")
+
+11. Locate the **Incidents – Label** widget. 
+
+![Incidents - Label widget](images/dashboards/emmontask11bstep11a.png " ")
+
+   **Click and hold it with the left mouse button, then drag** it to the location of the Incidents widget you deleted.
+
+![Incidents - Label widget - move to dashboard](images/dashboards/emmontask11bstep11b.png " ")
+
+12. If the Incident widget has moved other widgets, **select it and use the bottom arrow** to make it shorter...
+
+![Incidents - Label widget - fix height](images/dashboards/emmontask11bstep12a.png " ")
+
+
+   ... and **use the right arrow** to make it narrower.
+
+![Incidents - Label widget - fix width](images/dashboards/emmontask11bstep12b.png " ")
+
+
+   It should eventually look like this:
+
+![Incidents - Label widget](images/dashboards/emmontask11bstep12c.png " ")
+
+13. Open the widget's three-dot menu and select **Edit**.
+
+![Incidents - Label widget - Edit](images/dashboards/emmontask11bstep13.png " ")
+
+14. In the **Configured widget inputs** section, click the pencil icon next to the first input, **Composite Target Type**.
+
+![Edit Composite Target Type input](images/dashboards/emmontask11bstep14.png " ")
+
+15. In the dialog, select **Specify the Composite Target Type input**, click on the value field, and choose **Group**, then click **Save changes**.
+
+![Choose Group](images/dashboards/emmontask11bstep15.png " ")
+
+16. In the **Configured widget inputs** section, click the pencil icon next to the second input, **Composite Target Name**.
+
+![Edit Composite Target Name input](images/dashboards/emmontask11bstep16.png " ")
+
+17. In the dialog, verify this option is selected:  
+    **Link the Composite Target Name input with an existing filter** with 
+    **Select an existing filter:** Composite Target Name
+
+   ...and click **Save changes**.
+    This links the widget to the group selected in the dashboard's Composite Target Name filter.
+
+![Edit Composite Target Name input](images/dashboards/emmontask11bstep17.png " ")
+
+**Note:** Periodically click **Save changes** to save your dashboard changes, and then go to its Actions menu and select Edit again.
+
+![Save dashboard changes](images/dashboards/emmontask11bstep17b.png " ")
+
+18. Scroll to the bottom of the dashboard, locate the **Top Transactions (Per Second)** widget, and edit it.
+
+![Edit Top Transactions (Per Second) widget](images/dashboards/emmontask11bstep18.png " ")
+
+19. On the right panel, change the widget label from **Top Transactions (Per Second)** to **Throughput**.
+
+**Before edit:**
+
+![Edit Widget Name - before](images/dashboards/emmontask11bstep19a.png " ")
+
+**After edit:**
+
+![Edit Widget Name - after](images/dashboards/emmontask11bstep19b.png " ")
+
+20. In the **Configured widget inputs** section, click the pencil icon associated with **Metric Column**.
+
+![Edit Metric Column input](images/dashboards/emmontask11bstep20.png " ")
+
+21. In the dialog, select **Is editable by viewers** and click **Save changes**.
+
+![Edit Metric Column input - editable](images/dashboards/emmontask11bstep21.png " ")
+
+22. Review the Transactions widget. Since we made the choice of metric colum to be 'editable by viewers', there is now a local filter that allows viewers to choose the metric column shown in the chart. It is initially set to **Number of Transactions (per second)**.
+
+![Throughput Widget - local filter](images/dashboards/emmontask11bstep22.png " ")
+
+23. Change the local filter to another metric, such as **I/O Requests (per second)**, and review the updated chart.
+
+![Throughput Widget - change metric](images/dashboards/emmontask11bstep23.png " ")
+
+24. Scroll to the top of the dashboard and click **Save changes** to save all dashboard changes.
+
+![Dashbaord - Save changes](images/dashboards/emmontask11bstep24.png " ")
+
+
+
+## Task 11C: Share Dashboards with Other Users
+
+In this task, you will learn how to share dashboards with other users.
+
+**Note:**  Make sure you have created a dashboard to share. You can complete **Task 11B: Create Dashboard** to create one.
+
+1. If needed, log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/dashboards/emmontask11cstep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/dashboards/emmontask11cstep2.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+![Navigate to Dashboards](images/dashboards/emmontask11cstep3.png " ")
+
+4. Locate the dashboard you want to share, such as the **My Group Summary** dashboard created in Task 11B.
+   Open its three-dot **Actions** menu and select **Edit privileges…**.
+
+![Edit privileges](images/dashboards/emmontask11cstep4.png " ")
+
+5. In the dialog, click on the **Privilege** dropdown list and select **View Dashboard**.
+
+![Select View Dashboard](images/dashboards/emmontask11cstep5.png " ")
+
+6. Select the **Users** radio button, click on the **Grantee** dropdown list, and select **DB TARGET USER**.
+
+![Select DB TARGET USER](images/dashboards/emmontask11cstep6.png " ")
+
+7. Click **Add**, which adds "DB TARGET USER" to the table of Grantees, and then click **Save**.
+
+![Save DB TARGET USER](images/dashboards/emmontask11cstep7.png " ")
+
+8. In the confirmation dialog, note that the **View Saved Search** privilege is also required and will also be granted to **DB TARGET USER**. Click **OK**.
+
+![Confirm privileges granted to DB TARGET USER](images/dashboards/emmontask11cstep8.png " ")
+
+10. The user **DB TARGET USER** can now use your dashboard. However, the user can view data only for target groups for which he has at least **View** privileges.
+
+
+## Task 11D: Share Dashboards Across EM Sites
+
+In this task, you will learn how to share dashboards across Enterprise Manager sites. For example, you may have developed and tested a dashboard in an EM UAT site and now want to include it in your EM production site.
+
+**Note**: Make sure you have created a dashboard to share. You can complete **Task 11B: Create Dashboard** to create one.
+
+1. If needed, log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/dashboards/emmontask11dstep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/dashboards/emmontask11dstep2.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+![Navigate to Dashboards](images/dashboards/emmontask11dstep3.png " ")
+
+4. Locate the dashboard you want to share, such as the **My Group Summary** dashboard created in Task 11B.
+   Open its three-dot **Actions** menu and select **Export**.
+
+![Actions - Export](images/dashboards/emmontask11dstep4.png " ")
+
+5. The dashboard's definition is exported into a JSON file and is saved in the host's Downloads directory.
+
+![Dashboard exported](images/dashboards/emmontask11dstep5.png " ")
+
+Note: In our example, you would then copy the JSON file to a filesystem accessible from the EM console UI on the EM production site. From EM production site's Dashboards page, you would then import the dashboard.
+
+6. Let's walk through the dashboard import process using another dashboard.  From the main Dashboards page, click **Import dashboards**.
+
+![Import dashboards](images/dashboards/emmontask11dstep6.png " ")
+
+7. In the dialog that comes up, select the **Home** then **Scripts** folder ...
+
+![Import dashboards - Home-Scripts](images/dashboards/emmontask11dstep7a.png " ")
+
+... then **emdashboards** folder ...
+
+![Import dashboards - emdashboards](images/dashboards/emmontask11dstep7b.png " ")
+
+... then choose **Group\_Summary\_for\_Import.json** then click **Select**.
+
+![Import dashboards - choose json](images/dashboards/emmontask11dstep7c.png " ")
+
+8. In the confirmation dialog, click **Import**.
+
+![Import dashboards confirmation](images/dashboards/emmontask11dstep8.png " ")
+
+9. You should see a message confirming the dashboard was imported successfully.   
+
+![Import dashboards confirmation](images/dashboards/emmontask11dstep9.png " ")
+
+Click **Group\_Summary\_for\_Import** to view the dashboard.
+
+![View imported dashboard](images/dashboards/emmontask11dstep9b.png " ")
+
+
+## Task 11E: Create Custom Widget
+
+In this task, you will create a custom widget and add it to your group dashboard. The custom widget will show members of the group.
+
+**Note**: Complete **Task 11B: Create Dashboard** before beginning this task.
+
+1. If needed, log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/dashboards/emmontask11estep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/dashboards/emmontask11estep2.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+![Navigate to Dashboards](images/dashboards/emmontask11estep3.png " ")
+
+4. Locate and click your group dashboard, such as **My Group Summary**.
+
+![Click on My Group Summary](images/dashboards/emmontask11estep4.png " ")
+
+5. Open its three-dot **Actions** menu and select **Edit**.
+
+![Edit dashboard](images/dashboards/emmontask11estep5.png " ")
+
+6. In the right panel, click the **Widgets** tab.
+
+![Edit dashboard - Widgets](images/dashboards/emmontask11estep6.png " ")
+
+7. Click **+** and select **Create query-based widget**.
+
+![Add widget](images/dashboards/emmontask11estep7.png " ")
+
+8. In the widget editor, note there are fields for **Data source**, **SQL Query**, and **Visualization**.
+   - Data source refers to the source of data for the widget.   These could be the EM Repository, Target database or EM Federation data.   
+   - SQL Query refers to the SQL that retrieves the data.   
+   - Visualization refers to how the data should be shown: Table, Line chart, Bart chart, etc.
+
+![Add widget - definition](images/dashboards/emmontask11estep8.png " ")
+
+9. Keep **Data Source**  set to **EM Repository**.
+   In the **SQL Selector** dropdown, under **Predefined SQLs**, choose **Group – target count by target type**.
+
+![SQL Selector drop down](images/dashboards/emmontask11estep9.png " ")
+
+10. Select **Convert to Custom sql**.
+
+![Convert to Custom sql](images/dashboards/emmontask11estep10a.png " ")
+
+After 'Convert to Custom sql' has been chosen, it should look like this:
+
+![Converted to Custom sql](images/dashboards/emmontask11estep10b.png " ")
+
+11. In the **SQL Query** field, first remove the existing query...
+
+![Remove query](images/dashboards/emmontask11estep11a.png " ")
+
+... and then copy and paste the query below and enter it into the **SQL Query** field:
+
+```sql
+    SELECT
+        m.member_target_name as "TARGET",
+        t.type_display_name AS "TARGET TYPE",
+        t.target_type AS "TARGET_TYPE"
+    FROM
+        mgmt$target_flat_members m
+        JOIN mgmt$target_type_def t
+          ON m.member_target_type = t.target_type
+    WHERE m.aggregate_target_type = ?
+    AND m.aggregate_target_name = ?
+    ORDER BY
+        t.type_display_name,
+        m.member_target_name
+```
+It should look like this:
+![Add SQL query](images/dashboards/emmontask11estep11b.png " ")
+
+12. In the right panel, under **Settings**, locate **Configured widget inputs** and click the pencil icon for the first input, **Group Type**.
+
+![Configure Group Type](images/dashboards/emmontask11estep12.png " ")
+
+13. In the dialog, select **Specify the Group Type input**, choose **Group**, and click **Save changes**.
+
+![Set Group Type](images/dashboards/emmontask11estep13.png " ")
+
+14. Click the pencil icon for the second input, **Group Name**.
+
+![Configure Group Name](images/dashboards/emmontask11estep14.png " ")
+
+15. In the dialog, verify this option is set:  **Link the Group Name input with an existing filter**.
+   Verify that the selected filter is **Composite Target Name**.       
+   Click **Save changes**.
+   This specifies the group input for the widget is taken from dashboard's Composite Target Name filter.
+
+   ![Set Group Name filter](images/dashboards/emmontask11estep15.png " ")
+
+16. In the right panel, click the **Visualization** tab.
+
+   ![Visualization](images/dashboards/emmontask11estep16.png " ")
+
+17. From the **Chart type** dropdown, choose **Table**. A table is the most appropriate visualization for this use case.
+
+   ![Table chart type](images/dashboards/emmontask11estep17.png " ")
+
+18. In the Columns field, remove the last column **TARGET_TYPE**
+
+   ![Columns field](images/dashboards/emmontask11estep18.png " ")
+
+   It should look like this:
+
+   ![Columns field - edited](images/dashboards/emmontask11estep18b.png " ")
+
+19. Click the **About** tab.  Here we specify the widget name and description.
+   Enter the following values:
+
+    - **Name:** Group Members
+    - **Description:** List of members in the group
+
+   ![About tab](images/dashboards/emmontask11estep19.png " ")
+
+20. Click **Run** to verify the results.
+
+   ![Run](images/dashboards/emmontask11estep20.png " ")
+
+   After running the query, verify it returns a list of member targets for the group:
+   
+   ![Query results](images/dashboards/emmontask11estep20b.png " ")
+
+21. (Optionall step):  Click the **JSON** button to look at the JSON definition of the widget. 
+
+   ![JSON button](images/dashboards/emmontask11estep21.png " ")
+
+   The `dataConfig` section shows the query used by the widget. 
+
+  ![JSON definition](images/dashboards/emmontask11estep21b.png " ")
+
+   Click **Cancel** to return to the widget definition UI.
+
+   ![Cancel](images/dashboards/emmontask11estep21c.png " ")
+
+22. Click **Save**.
+
+   ![Save widget](images/dashboards/emmontask11estep22.png " ")
+
+23. When you return to the dashboard, scroll down to locate the new widget.
+
+   ![Group members widget](images/dashboards/emmontask11estep23.png " ")
+
+27. Resize the widget by dragging its right edge to expand it horizontally and its bottom edge to expand it vertically.
+
+   ![Resize widget](images/dashboards/emmontask11estep24.png " ")
+
+   After resizing the widget:
+
+   ![Resized widget](images/dashboards/emmontask11estep24b.png " ")
+
+25. Scroll up and click **Save changes**.
+
+   ![Save changes](images/dashboards/emmontask11estep25.png " ")
+
+26. Use the **Composite Target Name** filter at the top to change to a different group, such as **Demo-Group** or **ADMPRD0** and verify that the Group Members widget updates accordingly.
+
+   ![Composite Target Name filter](images/dashboards/emmontask11estep26.png " ")
+
+
+## Task 11F: Edit a Custom Widget via JSON Editing
+
+As you may have observed in Task 11E, a widget definition is stored as a JSON file. Additional features can be added by editing the JSON definition. In this task, you will edit the JSON of the Group Members widget created in Task 11E to add a link from each group member to its target homepage.
+
+**Note**: Complete **Task 11E: Create Custom Widget** before beginning this task.
+
+1. If necessary, log into Enterprise Manager using the credentials **emadmin/welcome1**.
+
+![Enterprise Manager login](images/dashboards/emmontask11fstep1.png " ")
+
+2. Click the **hamburger menu** icon.
+
+![Enterprise Manager menu icon](images/dashboards/emmontask11fstep2.png " ")
+
+3. Navigate to **Enterprise > Dashboards**.
+
+![Navigate to Dashboards](images/dashboards/emmontask11fstep3.png " ")
+
+4. Locate and click your group dashboard, such as **My Group Summary**.
+
+![Click on My Group Summary](images/dashboards/emmontask11fstep4.png " ")
+
+5. Open its three-dot **Actions** menu and select **Edit**.
+
+![Dashboard Actions - Edit](images/dashboards/emmontask11fstep5.png " ")
+
+6. Scroll down, locate the **Group Members** widget, open its three-dot menu in the upper right corner of the widget, and select **Edit**.
+
+![Widget Actions - Edit](images/dashboards/emmontask11fstep6.png " ")
+
+7. In the right panel, locate the "Group Members" widget and click **Edit Widget**.
+
+![Configuration for Group Members widget](images/dashboards/emmontask11fstep7.png " ")
+
+8. The UI to edit the widget comes up.  Since we want to edit the JSON definition, click the button **JSON**.
+
+![JSON button](images/dashboards/emmontask11fstep8.png " ")
+
+9. In the JSON definition, **scroll down to the uiConfig** section, around **line 39.** This section describes the behavior of the widget table columns, including **TARGET** and **TARGET TYPE**.
+
+![JSON - uiConfig section](images/dashboards/emmontask11fstep9.png " ")
+
+10. Select and **delete the existing entries (lines 43 to 49)** for the **TARGET** column, which look like this:
+
+    ```json
+    {
+        "val": "TARGET",
+        "header": {
+            "name": "TARGET"
+        },
+        "sortable": "disable"
+    },
+    ```
+ ![JSON - uiConfig section](images/dashboards/emmontask11fstep10.png " ")
+
+11. **Go to line 43** and and press the **Enter** key to add a new line.  Then **move your mouse back to line 43** (which should be an empty line).   
+It should look like this:
+
+ ![JSON - uiConfig section](images/dashboards/emmontask11fstep11.png " ")
+
+12. **Copy the JSON entries below and insert them into the JSON file, starting at line 43.** The inserted lines should span from line 43 to line 68.  
+These JSON entries include a `drilldownConfig` section specifies that clicking a target in a table row opens the target homepage. The URL for the target homepage is constructed based on the target name and target type taken from that row.
+
+    ```json
+    {
+        "val": "TARGET",
+        "header": {
+            "name": "TARGET"
+        },
+        "drilldownConfig": {
+            "url": {
+                "path": "/em/redirect",
+                "parameters": [
+                    {
+                        "name": "pageType",
+                        "value": "TARGET_HOMEPAGE"
+                    },
+                    {
+                        "name": "target",
+                        "value": "$(row.TARGET)"
+                    },
+                    {
+                        "name": "type",
+                        "value": "$(row.TARGET_TYPE)"
+                    }
+                ]
+            }
+        },
+        "sortable": "disable"
+    },
+    ```
+   The inserted JSON entries should look like this:
+    ![JSON - uiConfig section](images/dashboards/emmontask11fstep12.png " ")
+
+   If an extra blank line appears after inserting the JSON, delete the extra line.
+
+13. Click **Apply** to save your edits.
+
+   ![Apply button](images/dashboards/emmontask11fstep13.png " ")
+
+14. In the warning dialog, note that once the widget is edited via JSON editing, all future edits to the widget will require JSON editing.   
+Click **OK**.
+
+   ![Apply button](images/dashboards/emmontask11fstep14.png " ")
+
+15. Click **Save** to save the widget edits.
+
+   ![Apply button](images/dashboards/emmontask11fstep15.png " ")
+
+16. Click **Save changes** to save the dashboard changes.
+
+   ![Apply button](images/dashboards/emmontask11fstep16.png " ")
+
+17. On the dashboard page, scroll down to the **Group Members** widget. Each target name should now be a clickable link to its target homepage.
+
+   ![Apply button](images/dashboards/emmontask11fstep17.png " ")
+
+18. Right-click a target name and select **Open link in new tab**. Verify that a new browser tab opens with the target's homepage.
+
+   ![Apply button](images/dashboards/emmontask11fstep18.png " ")
+
+   New tab opened for the target homepage:
+    ![Apply button](images/dashboards/emmontask11fstep18b.png " ")
+
+
 ## Learn More
 
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
@@ -1643,6 +2500,6 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
   - [Monitoring Oracle Databases in AWS with Enterprise Manager](https://blogs.oracle.com/observability/post/monitoring-oracle-databases-in-aws-with-enterprise-manager)
 
 ## Acknowledgements
-- **Author** - Desiree Abrokwa, Product Manager, Enterprise Manager
-- **Contributors** - Ana McCollum, Anand Prabhu, Marco Hernandez - Enterprise Manager Product Management
-- **Last Updated By/Date** - Marco Hernandez, Product Manager, Enterprise Manager August 2025
+- **Authors** - Desiree Abrokwa, Marco Hernandez, Ana McCollum - Product Management
+- **Contributors** - Anand Prabhu - Product Management; Chris Roy, Ze Tian Ding, Nikhil Gupta - Product Development
+- **Last Updated By/Date** - Ana McCollum, August 2026
