@@ -1927,11 +1927,11 @@ Dashboards enable you to create custom solutions to meet specific operational or
 
 ![Navigate to Dashboards](images/dashboards/emmontask11astep3.png " ")
 
-4. Review the list of dashboards created by Oracle and other users. The description associated with each dashboard provides a summary of the dashboard's purpose.
+4. Review the list of dashboards created by Oracle and other users. The description associated with each dashboard provides a summary of the dashboard's purpose.  Dashboards can show data **across the enteprise**, or **data for a specific group** or **data for a specific target**.  
 
 ![Dashboards list](images/dashboards/emmontask11astep4.png " ")
 
-5. Locate and click the **Group Summary** dashboard.
+5. Locate and click the **Group Summary** dashboard.  
 
 ![Dashboards - Group Summary](images/dashboards/emmontask11astep5.png " ")
 
@@ -1951,17 +1951,45 @@ Dashboards enable you to create custom solutions to meet specific operational or
 
 ![Dashboards breadcrumb](images/dashboards/emmontask11astep9.png " ")
 
-10. From the Dashboards page, click **Show widgets**.
+10. Now let's look at a dashboard that shows data across the enterprise. Locate and click the **Enterprise Summary** dashboard. 
 
-![Show widgets button](images/dashboards/emmontask11astep10.png " ")
+![Dashboards -Enterprise Summary](images/dashboards/emmontask11astep10.png " ")
 
-11. Review the widgets available for use in dashboards.
+11. The Enterprise Summary dashboard shows overall health of targets across the enterprise, including target status, incidents, jobs, configuration and compliance violations. 
 
-![Widgets list](images/dashboards/emmontask11astep11.png " ")
+![Enterprise Summary dashboard](images/dashboards/emmontask11astep11.png " ")
 
-12. Click **Close** to return the the Dashboards page.
+12. Click the **Dashboards** breadcrumb at the top of the page to return to the main Dashboards page.
 
-![Widgets list](images/dashboards/emmontask11astep12.png " ")
+![Dashboards breadcrumb](images/dashboards/emmontask11astep12.png " ")
+
+13. Locate ahd click on **Target Summary**. This dashboard shows data for a specific target.
+
+![Dashboards- Target Summary](images/dashboards/emmontask11astep13.png " ")
+
+14. In the **Target Summary** dashboard, choose **Target Type = Host** and **Target Name = emcc.marketplace.com**
+
+![Target Summary - Target Type and Target Name](images/dashboards/emmontask11astep14.png " ")
+
+15. The **Target Summary** dashboard shows availability status, incidents, key performance metrics, compliance violations and jobs for the chosen target.
+
+![Target Summary dashboard](images/dashboards/emmontask11astep15.png " ")
+
+16. Click the **Dashboards** breadcrumb at the top of the page to return to the main Dashboards page.
+
+![Target Summary dashboard](images/dashboards/emmontask11astep16.png " ")
+
+17. From the Dashboards page, click **Show widgets**.
+
+![Show widgets button](images/dashboards/emmontask11astep17.png " ")
+
+18. Review the widgets available for use in dashboards.   Widgets show data across all functional areas of Enterprise Manager:  **availability status, metrics, incidents, jobs, compliance violations, patches**.
+
+![Widgets list](images/dashboards/emmontask11astep18.png " ")
+
+19. Click **Close** to return the the Dashboards page.
+
+![Widgets list](images/dashboards/emmontask11astep19.png " ")
 
 
 ## Task 11B: Create Dashboard
@@ -2086,11 +2114,12 @@ Remove the existing **Incidents (Last 7 Dasys)** widget by opening its three-dot
 
 ![Edit Metric Column input - editable](images/dashboards/emmontask11bstep21.png " ")
 
-22. Review the Transactions widget. Since we made the choice of metric colum to be 'editable by viewers', there is now a local filter that allows viewers to choose the metric column shown in the chart. It is initially set to **Number of Transactions (per second)**.
+22. Review the Transactions widget. Since we made the choice of metric colum to be 'editable by viewers', there is now a **local filter** that allows viewers to choose the metric column shown in the chart (widget). It is initially set to **Number of Transactions (per second)**.
 
 ![Throughput Widget - local filter](images/dashboards/emmontask11bstep22.png " ")
 
-23. Change the local filter to another metric, such as **I/O Requests (per second)**, and review the updated chart.
+23. Change the local filter to another metric, such as **I/O Requests (per second)**, and review the updated chart.  
+Note: Since it is a local filter, then changes made to the filter only affect this specific widget (chart) and not other widgets. 
 
 ![Throughput Widget - change metric](images/dashboards/emmontask11bstep23.png " ")
 
@@ -2237,7 +2266,7 @@ In this task, you will create a custom widget and add it to your group dashboard
 8. In the widget editor, note there are fields for **Data source**, **SQL Query**, and **Visualization**.
    - Data source refers to the source of data for the widget.   These could be the EM Repository, Target database or EM Federation data.   
    - SQL Query refers to the SQL that retrieves the data.   
-   - Visualization refers to how the data should be shown: Table, Line chart, Bart chart, etc.
+   - Visualization refers to how the data should be shown: Table, Line chart, Bar chart, etc.
 
 ![Add widget - definition](images/dashboards/emmontask11estep8.png " ")
 
@@ -2260,7 +2289,8 @@ After 'Convert to Custom sql' has been chosen, it should look like this:
 
 ... and then copy and paste the query below and enter it into the **SQL Query** field:
 
-```sql
+```
+<copy>
     SELECT
         m.member_target_name as "TARGET",
         t.type_display_name AS "TARGET TYPE",
@@ -2273,7 +2303,7 @@ After 'Convert to Custom sql' has been chosen, it should look like this:
     AND m.aggregate_target_name = ?
     ORDER BY
         t.type_display_name,
-        m.member_target_name
+        m.member_target_name</copy>
 ```
 It should look like this:
 ![Add SQL query](images/dashboards/emmontask11estep11b.png " ")
@@ -2430,6 +2460,7 @@ It should look like this:
 These JSON entries include a `drilldownConfig` section specifies that clicking a target in a table row opens the target homepage. The URL for the target homepage is constructed based on the target name and target type taken from that row.
 
     ```json
+    <copy>
     {
         "val": "TARGET",
         "header": {
@@ -2456,6 +2487,7 @@ These JSON entries include a `drilldownConfig` section specifies that clicking a
         },
         "sortable": "disable"
     },
+    </copy>
     ```
    The inserted JSON entries should look like this:
     ![JSON - uiConfig section](images/dashboards/emmontask11fstep12.png " ")
