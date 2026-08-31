@@ -150,23 +150,68 @@ The assistant can return rich widgets, tables, and visualizations directly withi
 Oracle AI Database Assistant combines Enterprise Manager telemetry with Large Language Models (LLMs) to provide an intuitive conversational experience for monitoring and operational investigations. Instead of manually searching through Enterprise Manager pages, administrators can ask questions related to database patching and compliance to understand the security posture at fleet level. 
 
 
-1. In the Oracle AI Database Assistant chat window enter **Show me list of subscribed targets** and hit `<`enter`>`: 
+1. In the Oracle AI Database Assistant chat window enter **Show configuration drift results by target type** and hit `<`enter`>`:
+    ```
+    <copy>
+    Show configuration drift results by target type
+    </copy>
+    ```
 
-    ![Subscribed targets list](ai-db-assistant-images/ai-db-assistant-dblm/subscribed-targets-list.png " ")
+    Before the patch window, assess whether targets have drifted from their approved configuration baselines. Resolve or document exceptions so patching begins from a known state.
+   
+    ![Configuration Drift Question](ai-db-assistant-images/ai-db-assistant-dblm/configuration-drift-question.png " ")
+    ![Configuration Drift Results](ai-db-assistant-images/ai-db-assistant-dblm/configuration-drift-results.png " ")
 
-2. Enter the prompt **Which databases are subscribed to 19cDB-Linux-x64-Apps?** in the chat window and hit `<`enter`>`: 
+2. Enter the prompt **Display the distribution of databases that are subscribed or not subscribed to an image for patching purpose** in the chat window and hit `<`enter`>`: 
 
-    ![DB Image List](ai-db-assistant-images/ai-db-assistant-dblm/db-image-list.png " ")
+    ```
+    <copy>
+    Display the distribution of databases that are subscribed or not subscribed to an image for patching purpose
+    </copy>
+    ```
 
-3. Enter the prompt **Are my databases compliant with patches?** in the chat window and hit `<`enter`>`:
+    Next, confirm patching readiness. Databases not subscribed to a patching image need to be enrolled before they can participate in the standardized fleet maintenance patch process.
 
-    ![DB Patch Compliance](ai-db-assistant-images/ai-db-assistant-dblm/db-patch-compliance.png " ")
+    ![Database subscriptions to the image question](ai-db-assistant-images/ai-db-assistant-dblm/db-subcription-question.png " ")
+    ![Database subscriptions to the image result](ai-db-assistant-images/ai-db-assistant-dblm/db-subcription-result.png " ")
 
-4. Enter the prompt **How many critical violations exist?** in the chat window and hit `<`enter`>`
-   The result shows a table without any data as no violations exists as database is compliant:
+3. Enter the prompt **Display the distribution of database images that are up-to-date or have patch recommendations** in the chat window and hit `<`enter`>`:
 
-    ![DB Compliant Widget](ai-db-assistant-images/ai-db-assistant-dblm/db-compliant-widget.png " ")
+    ```
+    <copy>
+    Display the distribution of database images that are up-to-date or have patch recommendations
+    </copy>
+    ```
 
+    Review the database images and identify those requiring recommended patches. Update or approve the appropriate image for patching cycle.
+
+    ![Database images question](ai-db-assistant-images/ai-db-assistant-dblm/dbimage-question.png " ")
+    ![Database images that are latest](ai-db-assistant-images/ai-db-assistant-dblm/dbimage-result.png " ")
+
+4. Enter the prompt **Display the distribution of databases that are compliant** in the chat window and hit `<`enter`>`
+
+    ```
+    <copy>
+    Display the distribution of databases that are compliant
+    </copy>
+    ```
+
+    After patching completes, evaluate the database fleet patch compliance.
+    ![Databases with latest patches](ai-db-assistant-images/ai-db-assistant-dblm/db-patchcomplianceqns.png " ")
+    ![Databases with latest patches](ai-db-assistant-images/ai-db-assistant-dblm/db-patchcomplianceresp.png " ")
+
+5. Enter the prompt **How many critical compliance violations exist?** in the chat window and hit `<`enter`>`:
+
+    ```
+    <copy>
+    How many critical compliance violations exist?
+    </copy>
+    ```
+
+    Investigate any remaining violations to identify databases and security controls requiring remediation or approved exceptions.
+
+     ![Compliance violations question](ai-db-assistant-images/ai-db-assistant-dblm/db-compliance-question.png " ")
+     ![Compliance violations results](ai-db-assistant-images/ai-db-assistant-dblm/db-compliance-results.png " ")
 
 ## Learn More
 
