@@ -147,71 +147,97 @@ The assistant can return rich widgets, tables, and visualizations directly withi
 
 ## Task 1B: Oracle AI Database Assistant - Database Patching and Compliance
 
-Oracle AI Database Assistant combines Enterprise Manager telemetry with Large Language Models (LLMs) to provide an intuitive conversational experience for monitoring and operational investigations. Instead of manually searching through Enterprise Manager pages, administrators can ask questions related to database patching and compliance to understand the security posture at fleet level. 
+Oracle AI Database Assistant combines Enterprise Manager telemetry with Large Language Models (LLMs) to provide an intuitive conversational experience for monitoring and operational investigations.
+
+In this task, you use the assistant to assess database fleet readiness before a patch window and verify patch compliance after patching. 
+Instead of navigating multiple Enterprise Manager pages, you ask targeted questions in the chat window and use the results to identify drift, missing image subscriptions, patch recommendations, compliance gaps, and critical violations.
+
+The prompts in these tasks are organized into two sections:
+* **Steps 1–3:** Assess patching readiness before the patch window.
+* **Steps 4–5:** Verify compliance after patching is complete.
 
 
-1. In the Oracle AI Database Assistant chat window enter **Show configuration drift results by target type** and hit `<`enter`>`:
+1. Review **configuration drift**
+
+    Configuration drift can indicate that a target no longer matches its approved configuration baseline. Review drift before patching so that you can resolve or document exceptions.
+
+    In the **Oracle AI Database Assistant chat window, enter the following prompt and press Enter:**
     ```
     <copy>
     Show configuration drift results by target type
     </copy>
     ```
 
-    Before the patch window, assess whether targets have drifted from their approved configuration baselines. Resolve or document exceptions so patching begins from a known state.
-   
     ![Configuration Drift Question](ai-db-assistant-images/ai-db-assistant-dblm/configuration-drift-question.png " ")
+
+    Review the results by target type.
     ![Configuration Drift Results](ai-db-assistant-images/ai-db-assistant-dblm/configuration-drift-results.png " ")
 
-2. Enter the prompt **Display the distribution of databases that are subscribed or not subscribed to an image for patching purpose** in the chat window and hit `<`enter`>`: 
+2. Check **database subscriptions to gold images**
 
+    Databases must be subscribed to an appropriate gold image to participate in a standardized fleet maintenance patching process. Identify databases that are not subscribed and enroll them before patching.
+
+    In the chat window, **enter the following prompt and press Enter:**
     ```
     <copy>
-    Display the distribution of databases that are subscribed or not subscribed to an image for patching purpose
+    Display databases not subscribed to gold image for patching
     </copy>
     ```
-
-    Next, confirm patching readiness. Databases not subscribed to a patching image need to be enrolled before they can participate in the standardized fleet maintenance patch process.
 
     ![Database subscriptions to the image question](ai-db-assistant-images/ai-db-assistant-dblm/db-subcription-question.png " ")
+
+    Review the distribution of subscribed and unsubscribed databases.
     ![Database subscriptions to the image result](ai-db-assistant-images/ai-db-assistant-dblm/db-subcription-result.png " ")
 
-3. Enter the prompt **Display the distribution of database images that are up-to-date or have patch recommendations** in the chat window and hit `<`enter`>`:
+3. Review **patch recommendations**
 
+    Patch recommendations are grouped by classification to help you understand the type and scope of patches required across the database fleet.
+
+    Use these recommendations to update the appropriate gold images. Create a new version of the gold image with the recommended patches so that it is ready for use during the patching cycle.
+
+    In the chat window, **enter the following prompt and press Enter:**
     ```
     <copy>
-    Display the distribution of database images that are up-to-date or have patch recommendations
+    Display the distribution of patch recommendations
     </copy>
     ```
 
-    Review the database images and identify those requiring recommended patches. Update or approve the appropriate image for patching cycle.
+    ![Database patch recommendations](ai-db-assistant-images/ai-db-assistant-dblm/db-patchrecom-question.png " ")
 
-    ![Database images question](ai-db-assistant-images/ai-db-assistant-dblm/dbimage-question.png " ")
-    ![Database images that are latest](ai-db-assistant-images/ai-db-assistant-dblm/dbimage-result.png " ")
+    Review the distribution of patch recommendations by classification.
 
-4. Enter the prompt **Display the distribution of databases that are compliant** in the chat window and hit `<`enter`>`
+    ![Database subscriptions to the image question](ai-db-assistant-images/ai-db-assistant-dblm/db-patchrecom-result.png " ")
 
+4. Review **database patch compliance** once the patching cycle completes
+
+    Evaluate the fleet after patching to confirm how many databases are patch compliant.
+
+    In the chat window, **enter the following prompt and press Enter:**
     ```
     <copy>
     Display the distribution of databases that are compliant
     </copy>
     ```
-
-    After patching completes, evaluate the database fleet patch compliance.
     ![Databases with latest patches](ai-db-assistant-images/ai-db-assistant-dblm/db-patchcomplianceqns.png " ")
-    ![Databases with latest patches](ai-db-assistant-images/ai-db-assistant-dblm/db-patchcomplianceresp.png " ")
 
-5. Enter the prompt **How many critical compliance violations exist?** in the chat window and hit `<`enter`>`:
+    Review fleet-level view of database patch compliance.
+    ![Compliance violations results](ai-db-assistant-images/ai-db-assistant-dblm/db-patchcomplianceresp.png " ")
 
+5. Review **critical compliance violations**
+
+    Review critical compliance violations after patching. These violations may identify databases or security controls that require remediation or an approved exception.
+    
+    In the chat window, **enter the following prompt and press Enter:**
     ```
     <copy>
     How many critical compliance violations exist?
     </copy>
     ```
 
-    Investigate any remaining violations to identify databases and security controls requiring remediation or approved exceptions.
+    ![Compliance violations question](ai-db-assistant-images/ai-db-assistant-dblm/db-compliance-question.png " ")
 
-     ![Compliance violations question](ai-db-assistant-images/ai-db-assistant-dblm/db-compliance-question.png " ")
-     ![Compliance violations results](ai-db-assistant-images/ai-db-assistant-dblm/db-compliance-results.png " ")
+    Review the number of critical violations and investigate the affected databases and controls.
+    ![Compliance violations results](ai-db-assistant-images/ai-db-assistant-dblm/db-compliance-results.png " ")
 
 ## Learn More
 
